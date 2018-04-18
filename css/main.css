@@ -1354,7 +1354,7 @@ header.header .mask {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(55,68,84,0.82);
+  background-color: rgba(55,68,84,0.2);
 }
 header.header .header-cont {
   position: absolute;
