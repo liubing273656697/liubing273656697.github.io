@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- content-Type -->
+<meta charset="utf-8">
+
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="language" content="en">
+<meta name="robots" content="all">
+
+
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+<meta name="author" content="xiuxiu, 1428915751@qq.com">
+<meta name="reply-to" content="1428915751@qq.com">
+<meta name="owner" content="xiuxiu">
+
+
+
+
+<meta name="google-site-verification" content="xxxxxxxxxx" />
+
+
+
+
+<meta name="baidu-site-verification" content="xxxxxxxxxx" />
+
+
+
+
+
+
+
+<meta name="keywords" content="ngrok的使用," />
+
+
+<meta name="description" content="ngrok使用的步骤1.把项目放到tomcat启动（即点击startup.bat）tomcat将项目放到tomcat下  启动tomcat  2.打开https://www.ngrok.cc/打开https://www.ngrok.cc/，登录系统，设置相关信息。  3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe找到Sunny.exe所在的根目录  通过cm">
+<meta name="keywords" content="ngrok的使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ngrok的基本使用">
+<meta property="og:url" content="http://yoursite.com/2018/05/03/ngrok的基本使用/index.html">
+<meta property="og:site_name" content="秀秀的博客">
+<meta property="og:description" content="ngrok使用的步骤1.把项目放到tomcat启动（即点击startup.bat）tomcat将项目放到tomcat下  启动tomcat  2.打开https://www.ngrok.cc/打开https://www.ngrok.cc/，登录系统，设置相关信息。  3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe找到Sunny.exe所在的根目录  通过cm">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/ngrok/1.png">
+<meta property="og:image" content="http://yoursite.com/images/ngrok/2.png">
+<meta property="og:image" content="http://yoursite.com/images/ngrok/3.png">
+<meta property="og:image" content="http://yoursite.com/images/ngrok/4.png">
+<meta property="og:image" content="http://yoursite.com/images/ngrok/5.png">
+<meta property="og:image" content="http://yoursite.com/images/ngrok/6.png">
+<meta property="og:updated_time" content="2018-05-03T07:18:48.991Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ngrok的基本使用">
+<meta name="twitter:description" content="ngrok使用的步骤1.把项目放到tomcat启动（即点击startup.bat）tomcat将项目放到tomcat下  启动tomcat  2.打开https://www.ngrok.cc/打开https://www.ngrok.cc/，登录系统，设置相关信息。  3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe找到Sunny.exe所在的根目录  通过cm">
+<meta name="twitter:image" content="http://yoursite.com/images/ngrok/1.png">
+
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.0.2" />
+
+
+
+
+
+
+<link href="http://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.0.2"/>
+
+
+<script>
+(function(){
+  var bp = document.createElement('script');
+  bp.src = '//push.zhanzhang.baidu.com/push.js';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  <title> ngrok的基本使用 </title>
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'xxxxxxxxxx', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxx";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+</head>
+<body lang="zh-Hans">
+
+  <!--[if lte IE 9]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+
+  <div class="another-theme layout">
+
+    
+<header class="header" id="header" style="background: url(/images/ngrok/bg.png) center / cover">
+
+  <div class="header-cont">
+    <div class="text-area">
+      
+        <h1 class="title" data-text="ngrok的基本使用"> ngrok的基本使用 </h1>
+
+        
+        <div class="post-meta">
+          <div class="post-time">
+            发表于
+            <time  datetime="2018-05-03T14:15:33+08:00" content="2018-05-03">
+              2018-05-03
+            </time>
+          </div>
+
+          
+            <div class="post-category" >
+              
+                <span>
+                  <a href="/categories#ngrok" itemprop="url" rel="index">
+                    <span itemprop="name">ngrok</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </div>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <a href="/2018/05/03/ngrok的基本使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/05/03/ngrok的基本使用/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+        </div>
+        
+      
+    </div>
+    <!-- Navigation -->
+    
+    <nav class="navigation clearfix" id="navigation">
+      
+        
+        <a class="nav-link" href="/" rel="section">
+          首页
+        </a>
+      
+        
+        <a class="nav-link" href="/categories" rel="section">
+          分类
+        </a>
+      
+        
+        <a class="nav-link" href="/tags" rel="section">
+          标签
+        </a>
+      
+        
+        <a class="nav-link" href="/about" rel="section">
+          关于
+        </a>
+      
+    </nav>
+    
+  </div>
+  <div class="mask"></div>
+</header>
+
+
+    <main class="container">
+
+      
+
+  <article class="post-article post-type-normal post" itemscope>
+
+  <div class="post-body">
+
+    <div class="content markdown-body"><h1 id="ngrok使用的步骤"><a href="#ngrok使用的步骤" class="headerlink" title="ngrok使用的步骤"></a>ngrok使用的步骤</h1><h1 id="1-把项目放到tomcat启动（即点击startup-bat）tomcat"><a href="#1-把项目放到tomcat启动（即点击startup-bat）tomcat" class="headerlink" title="1.把项目放到tomcat启动（即点击startup.bat）tomcat"></a>1.把项目放到tomcat启动（即点击startup.bat）tomcat</h1><p>将项目放到tomcat下</p>
+<p><img src="/images/ngrok/1.png" alt="ngrok图片"></p>
+<p>启动tomcat</p>
+<p><img src="/images/ngrok/2.png" alt="ngrok图片"></p>
+<h1 id="2-打开https-www-ngrok-cc"><a href="#2-打开https-www-ngrok-cc" class="headerlink" title="2.打开https://www.ngrok.cc/"></a>2.打开<a href="https://www.ngrok.cc/" target="_blank" rel="noopener">https://www.ngrok.cc/</a></h1><p>打开<a href="https://www.ngrok.cc/，登录系统，设置相关信息。" target="_blank" rel="noopener">https://www.ngrok.cc/，登录系统，设置相关信息。</a></p>
+<p><img src="/images/ngrok/3.png" alt="ngrok图片"></p>
+<h1 id="3-通过cmd进入客户端根目录（即sunny-exe所在目录），启动sunny-exe"><a href="#3-通过cmd进入客户端根目录（即sunny-exe所在目录），启动sunny-exe" class="headerlink" title="3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe"></a>3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe</h1><p>找到Sunny.exe所在的根目录</p>
+<p><img src="/images/ngrok/4.png" alt="ngrok图片"></p>
+<p>通过cmd进行启动，sunny.exe clientid id（<a href="https://www.ngrok.cc/" target="_blank" rel="noopener">https://www.ngrok.cc/</a> 网站上面的id）</p>
+<p><img src="/images/ngrok/5.png" alt="ngrok图片"></p>
+<h1 id="4-外网访问（即：第三步，窗口看到的ip就是外网ip）"><a href="#4-外网访问（即：第三步，窗口看到的ip就是外网ip）" class="headerlink" title="4.外网访问（即：第三步，窗口看到的ip就是外网ip）"></a>4.外网访问（即：第三步，窗口看到的ip就是外网ip）</h1><p>红色线部分是指IP，<a href="http://xiuxiu.free.ngrok.cc/dist/index.html" target="_blank" rel="noopener">http://xiuxiu.free.ngrok.cc/dist/index.html</a> ，dist是指项目名称，index.html页面。</p>
+<p><img src="/images/ngrok/6.png" alt="ngrok图片"></p>
+</div>
+
+    <div class="post-sidebar">
+  <div class="toggle-btn" id="toggle-btn">
+    <i class="fa fa-reorder"></i>
+  </div>
+  <section class="post-toc-wrap" id="post-sidebar">
+    <h2 class="toc-title">内容目录</h2>
+    <div class="post-toc">
+      
+      
+        <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ngrok使用的步骤"><span class="nav-text">ngrok使用的步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-把项目放到tomcat启动（即点击startup-bat）tomcat"><span class="nav-text">1.把项目放到tomcat启动（即点击startup.bat）tomcat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-打开https-www-ngrok-cc"><span class="nav-text">2.打开https://www.ngrok.cc/</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-通过cmd进入客户端根目录（即sunny-exe所在目录），启动sunny-exe"><span class="nav-text">3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-外网访问（即：第三步，窗口看到的ip就是外网ip）"><span class="nav-text">4.外网访问（即：第三步，窗口看到的ip就是外网ip）</span></a></li></ol></div>
+      
+    </div>
+  </section>
+</div>
+
+
+  </div>
+
+  <footer class="post-footer">
+    
+      <div class="post-tags">
+        
+          <a href="/tags#ngrok的使用" rel="tag">#ngrok的使用</a>
+        
+      </div>
+    
+    
+  <style>
+    .donation {
+      width: 100%;
+      margin-top: 2rem;
+    }
+    .donation .text {
+      color: #333;
+      font-size: .8rem;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .donation .text:hover {
+      color: rgb(63,134,181);
+    }
+    .donation .img-box {
+      transition: all .3s;
+      width: 0;
+      height: 0;
+      margin: 1rem auto;
+      overflow: hidden;
+    }
+    .donation .img-box img {
+      width: 100%;
+      height: 100%;
+    }
+    .donation #donation {
+      display: none;
+    }
+    .donation #donation:checked + .img-box {
+      width: 16rem;
+      height: 16rem;
+    }
+  </style>
+  <div class="donation">
+    <label class="text" for="donation">
+      如果你觉得文章对你有帮助，并且想为我买一杯咖啡，点这里～
+    </label>
+    <input type="checkbox" name="donation" id="donation">
+    <div class="img-box">
+      <img src="/img/donation.png" alt="donation" />
+    </div>
+  </div>
+
+
+  </footer>
+
+</article>
+
+
+
+
+      
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2018/05/03/ngrok的基本使用/"
+           data-title="ngrok的基本使用" data-url="http://yoursite.com/2018/05/03/ngrok的基本使用/">
+      </div>
+    
+  </div>
+
+
+
+
+    </main>
+
+    <footer class="footer clearfix">
+  <div class="copyright" >
+    <span>Copyright</span>
+    
+    &copy; 
+    <span itemprop="copyrightYear">2018</span>
+    <span class="author" itemprop="copyrightHolder">xiuxiu</span>
+  </div>
+
+  <div class="info">
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+      <span id="showDays" class="show-days"></span>
+      <script>
+      var birthDay = new Date('09/04/2018');
+      var now = new Date();
+      var duration = now.getTime() - birthDay.getTime();
+      var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+      document.getElementById("showDays").innerHTML = "本站已运行 "+total+" 天";
+      </script>
+      ---
+    
+    <span id="busuanzi_container_site_pv">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+  </div>
+
+  <div class="my-theme">
+    Theme by <a href="//qiutc.me">qiutc</a> | <iframe style="margin-left: 5px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=TongchengQiu&amp;repo=hexo-theme-another&amp;type=star&amp;count=true"></iframe>
+  </div>
+
+</footer>
+
+
+  </div>
+
+  <div class="back-top-btn" id="back-top-btn"><i class="fa fa-chevron-up"></i></div>
+
+
+
+
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xxxxxxxxxx"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+
+
+
+
+<script type="text/javascript" src="/js/motto.min.js?v=0.0.2"></script>
+<script type="text/javascript" src="/js/main.js?v=0.0.2"></script>
+
+
+</body>
+</html>
