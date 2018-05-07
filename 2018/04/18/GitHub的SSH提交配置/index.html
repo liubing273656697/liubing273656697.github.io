@@ -56,7 +56,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/github/githubsetup.png">
 <meta property="og:image" content="http://yoursite.com/images/github/githubssh.png">
-<meta property="og:updated_time" content="2018-04-20T04:00:05.833Z">
+<meta property="og:updated_time" content="2018-05-07T03:45:07.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitHub的SSH提交配置">
 <meta name="twitter:description" content="Git可以通过https方式和ssh方式连接服务器上的仓库。两者比较：1.https： 比较方便，但是每次fetch和push代码都需要输入账号和密码，略显麻烦2.ssh： 传输前压缩数据，传输效率高，不需要每次提供账号密码 Git的user name和email设置12$ git config --global user.name &quot;xxxx&quot;$ git config --global user">
@@ -232,6 +232,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[remote <span class="string">"origin"</span>]</span><br><span class="line">    url = https:<span class="comment">//github.com/oDevilo/Java-Base</span></span><br><span class="line">    fetch = +refs/heads<span class="comment">/*:refs/remotes/origin/*</span></span><br></pre></td></tr></table></figure>
 <p>修改后：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[remote <span class="string">"origin"</span>]</span><br><span class="line">    url = git@github.com:oDevilo/Java-Base</span><br><span class="line">    fetch = +refs/heads<span class="comment">/*:refs/remotes/origin/*</span></span><br></pre></td></tr></table></figure>
+<p>刘兵</p>
 </div>
 
     <div class="post-sidebar">
