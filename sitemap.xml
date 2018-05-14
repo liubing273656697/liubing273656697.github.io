@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/05/10/redis%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2018-05-14T07:07:06.763Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/05/14/spring%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</loc>
     
     <lastmod>2018-05-14T06:47:32.406Z</lastmod>
@@ -9,21 +16,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/05/14/spring/</loc>
-    
-    <lastmod>2018-05-14T06:13:46.520Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/10/redis%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2018-05-10T03:54:41.170Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/18/GitHub%E7%9A%84SSH%E6%8F%90%E4%BA%A4%E9%85%8D%E7%BD%AE/</loc>
+    <loc>http://yoursite.com/2018/04/18/GitHub%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2018-05-09T02:18:14.590Z</lastmod>
     
@@ -103,41 +96,6 @@
     <loc>http://yoursite.com/2018/04/13/categories/</loc>
     
     <lastmod>2018-04-13T09:27:01.549Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/09/hello-world2/</loc>
-    
-    <lastmod>2018-04-09T12:38:36.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/09/hello-world5/</loc>
-    
-    <lastmod>2018-04-09T12:38:36.282Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/09/hello-world3/</loc>
-    
-    <lastmod>2018-04-09T12:38:36.282Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/09/hello-world4/</loc>
-    
-    <lastmod>2018-04-09T12:38:36.282Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/04/09/hello-world/</loc>
-    
-    <lastmod>2018-04-09T12:37:43.197Z</lastmod>
     
   </url>
   

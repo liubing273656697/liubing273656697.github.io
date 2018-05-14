@@ -41,35 +41,11 @@
   </entry>
   
   <entry>
-    <title>spring</title>
-    <link href="http://yoursite.com/2018/05/14/spring/"/>
-    <id>http://yoursite.com/2018/05/14/spring/</id>
-    <published>2018-05-14T05:56:43.000Z</published>
-    <updated>2018-05-14T06:13:46.520Z</updated>
-    
-    <content type="html"><![CDATA[<p>Spring工作原理<br>1、spring原理</p><pre><code>内部最核心的就是IOC了，动态注入，让一个对象的创建不用new了，可以自动的生产，这其实就是利用java里的反射，反射其实就是在运行时动态的去创建、调用对象，Spring就是在运行时，跟xml Spring的配置文件来动态的创建对象，和调用对象里的方法的 。Spring还有一个核心就是AOP这个就是面向切面编程，可以为某一类对象 进行监督和控制（也就是 在调用这类对象的具体方法的前后去调用你指定的 模块）从而达到对一个模块扩充的功能。这些都是通过  配置类达到的。Spring目的：就是让对象与对象（模块与模块）之间的关系没有通过代码来关联，都是通过配置类说明管理的（Spring根据这些配置 内部通过反射去动态的组装对象）要记住：Spring是一个容器，凡是在容器里的对象才会有Spring所提供的这些服务和功能。</code></pre><p>Spring里用的最经典的一个设计模式就是：模板方法模式。(这里我都不介绍了，是一个很常用的设计模式)， Spring里的配置是很多的，很难都记住，但是Spring里的精华也无非就是以上的两点，把以上两点跟理解了 也就基本上掌握了Spring.</p><p>Spring AOP与IOC<br>一、 IoC(Inversion of control): 控制反转<br>1、IoC：<br>概念：控制权由对象本身转向容器；由容器根据配置文件去创建实例并创建各个实例之间的依赖关系<br>核心：bean工厂；在Spring中，bean工厂创建的各个实例称作bean<br>二、AOP(Aspect-Oriented Programming): 面向方面编程<br>1、 代理的两种方式：<br>静态代理：<br> 针对每个具体类分别编写代理类；<br> 针对一个接口编写一个代理类；<br>动态代理：<br>针对一个方面编写一个InvocationHandler，然后借用JDK反射包中的Proxy类为各种接口动态生成相应的代理类</p><p>2、动态代理:</p><p>不用写代理类，虚拟机根据真实对象实现的接口产生一个类，通过类实例化一个动态代理，在实例化动态代理时将真实对象及装备注入到动态代理中，向客户端公开的是动态代理，当客户端调用动态代理方法时，动态代理根据类的反射得到真实对象的Method,调用装备的invoke方法，将动态代理、 Method、方法参数传与装备的invoke方法，invoke方法在唤起method方法前或后做一些处理。</p><pre><code>1、产生动态代理的类:               java.lang.refect.Proxy2、装备必须实现InvocationHandler接口实现invoke方法</code></pre><p>3、反射</p><pre><code>什么是类的返射?    通过类说明可以得到类的父类、实现的接口、内部类、构造函数、方法、属性并可以根据构造器实例化一个对象，唤起一个方法，取属性值，改属性值。如何得到一个类说明：                    Class cls=类.class;                    Class cls=对象.getClass();                    Class.forName(&quot;类路径&quot;);   如何得到一个方法并唤起它?                    Class cls=类.class;                    Constructor cons=cls.getConstructor(new Class[]{String.class});                    Object obj=cons.newInstance(new Object[]{&quot;aaa&quot;});                    Method method=cls.getMethod(&quot;方法名&quot;,new Class[]{String.class,Integer.class});                    method.invoke(obj,new Object[]{&quot;aa&quot;,new Integer(1)});</code></pre><p>4、spring的三种注入方式是什么?</p><pre><code>setterinterfaceconstructor</code></pre><p>5、spring的核心接口及核类配置文件是什么?</p><pre><code>FactoryBean:工厂bean主要实现ioc/di ApplicationContext ac=new FileXmlApplicationContext(&quot;applicationContext.xml&quot;);  Object obj=ac.getBean(&quot;id值&quot;);</code></pre><p>6、Spring框架的7个模块<br>Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spring 模块构建在核心容器之上，核心容器定义了创建、配置和管理 bean 的方式，组成 Spring 框架的每个模块（或组件）都可以单独存在，或者与其他一个或多个模块联合实现。每个模块的功能如下：</p><pre><code>核心容器：核心容器提供 Spring 框架的基本功能。核心容器的主要组件是 BeanFactory，它是工厂模式的实现。BeanFactory 使用控制反转 （IOC）模式将应用程序的配置和依赖性规范与实际的应用程序代码分开。Spring 上下文：Spring 上下文是一个配置文件，向 Spring 框架提供上下文信息。Spring 上下文包括企业服务，例如 JNDI、EJB、电子邮件、国际化、校验和调度功能。Spring AOP：通过配置管理特性，Spring AOP 模块直接将面向方面的编程功能集成到了 Spring 框架中。所以，可以很容易地使 Spring 框架管理的任何对象支持 AOP。Spring AOP 模块为基于 Spring 的应用程序中的对象提供了事务管理服务。通过使用 Spring AOP，不用依赖 EJB 组件，就可以将声明性事务管理集成到应用程序中。Spring DAO：JDBC DAO 抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理和不同数据库供应商抛出的错误消息。异常层次结构简化了错误处理，并且极大地降低了需要编写的异常代码数量（例如打开和关闭连接）。Spring DAO 的面向 JDBC 的异常遵从通用的 DAO 异常层次结构。Spring ORM：Spring 框架插入了若干个 ORM 框架，从而提供了 ORM 的对象关系工具，其中包括 JDO、Hibernate 和 iBatis SQL Map。所有这些都遵从 Spring 的通用事务和 DAO 异常层次结构。Spring Web 模块：Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文。所以，Spring 框架支持与 Jakarta Struts 的集成。Web 模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。Spring MVC 框架：MVC 框架是一个全功能的构建 Web 应用程序的 MVC 实现。通过策略接口，MVC 框架变成为高度可配置的，MVC 容纳了大量视图技术，其中包括 JSP、Velocity、Tiles、iText 和 POI。</code></pre><p>Spring 框架的功能可以用在任何 J2EE 服务器中，大多数功能也适用于不受管理的环境。Spring 的核心要点是：支持不绑定到特定 J2EE 服务的可重用业务和数据访问对象。毫无疑问，这样的对象可以在不同 J2EE 环境 （Web 或 EJB）、独立应用程序、测试环境之间重用。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Spring工作原理&lt;br&gt;1、spring原理&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;内部最核心的就是IOC了，动态注入，让一个对象的创建不用new了，可以自动的生产，这其实就是利用java里的反射，反射其实就是在运行时动态的去创建、调用对象，Spring就是在运行时，跟xml 
-      
-    
-    </summary>
-    
-      <category term="spring" scheme="http://yoursite.com/categories/spring/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>redis集群搭建</title>
     <link href="http://yoursite.com/2018/05/10/redis%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2018/05/10/redis集群搭建/</id>
     <published>2018-05-10T03:20:08.000Z</published>
-    <updated>2018-05-10T03:54:41.170Z</updated>
+    <updated>2018-05-14T07:07:06.763Z</updated>
     
     <content type="html"><![CDATA[<p>介于有人需要，总结一下，不保证对</p><h2 id="1、下载redis-3-0-0-tar-gz-必须3-0-0及之后版本，之前版本不支持集群模式"><a href="#1、下载redis-3-0-0-tar-gz-必须3-0-0及之后版本，之前版本不支持集群模式" class="headerlink" title="1、下载redis-3.0.0.tar.gz (必须3.0.0及之后版本，之前版本不支持集群模式)"></a>1、下载redis-3.0.0.tar.gz (必须3.0.0及之后版本，之前版本不支持集群模式)</h2><p> 下载：wget <a href="http://download.redis.io/releases/redis-3.0.0.tar.gz" target="_blank" rel="noopener">http://download.redis.io/releases/redis-3.0.0.tar.gz</a><br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf redis<span class="number">-3.0</span><span class="number">.0</span>.tar.gz -C /usr/local/</span><br></pre></td></tr></table></figure></p><p> 重命名(如果嫌名字太长，可重命名，我这里就改一下)<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/local/redis<span class="number">-3.0</span><span class="number">.0</span> /usr/local/redis3<span class="number">.0</span></span><br><span class="line">cd /usr/local/redis3<span class="number">.0</span></span><br></pre></td></tr></table></figure></p><p> 编译<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure></p><p> 未make install时，/usr/local/redis3.0/src/目录下没有redis-cli、redis-server 等启动脚本<br>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/redis3<span class="number">.0</span>/src/</span><br></pre></td></tr></table></figure></p><h2 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h2>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure><p> 是否安装成功，可观察/usr/local/redis3.0/src/目录下redis-cli、redis-server 等脚本</p><h2 id="3、为了方便操作，同时不影响源文件，这里进行以下操作"><a href="#3、为了方便操作，同时不影响源文件，这里进行以下操作" class="headerlink" title="3、为了方便操作，同时不影响源文件，这里进行以下操作"></a>3、为了方便操作，同时不影响源文件，这里进行以下操作</h2>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /usr/local/redis/bin</span><br><span class="line">mv mkreleasehdr.sh redis-benchmark redis-check-aof redis-check-dump redis-cli redis-server /usr/local/redis/bin</span><br></pre></td></tr></table></figure><h2 id="4、创建redis-cluster文件夹，并在下面创建6个文件夹（一般集群最少6个，3主3从）"><a href="#4、创建redis-cluster文件夹，并在下面创建6个文件夹（一般集群最少6个，3主3从）" class="headerlink" title="4、创建redis-cluster文件夹，并在下面创建6个文件夹（一般集群最少6个，3主3从）"></a>4、创建redis-cluster文件夹，并在下面创建6个文件夹（一般集群最少6个，3主3从）</h2>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /usr/local/redis-cluster</span><br><span class="line">cd /usr/local/redis-cluster</span><br><span class="line">mkdir <span class="number">7001</span> <span class="number">7002</span> <span class="number">7003</span> <span class="number">7004</span> <span class="number">7005</span> <span class="number">7006</span></span><br></pre></td></tr></table></figure><h2 id="5、将-usr-local-redis3-0-redis-conf配置文件分别copy到700-文件下，分别进行修改"><a href="#5、将-usr-local-redis3-0-redis-conf配置文件分别copy到700-文件下，分别进行修改" class="headerlink" title="5、将/usr/local/redis3.0/redis.conf配置文件分别copy到700*文件下，分别进行修改"></a>5、将/usr/local/redis3.0/redis.conf配置文件分别copy到700*文件下，分别进行修改</h2>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/redis3<span class="number">.0</span>/redis.conf /usr/local/redis-cluster/<span class="number">7001</span></span><br><span class="line">vi /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf</span><br></pre></td></tr></table></figure><p> 修改如下：<br>    <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">daemonize yes # 后台启动</span><br><span class="line">port 7001 # 端口</span><br><span class="line">bind 192.168.0.228 # 服务器IP</span><br><span class="line">dir /usr/local/redis-cluster/7001/ # 数据存放位置，每个节点路径不一样</span><br><span class="line">cluster-enabled yes # 启动集群模式</span><br><span class="line">cluster-config-file nodes-7001.conf # 名称最好与端口一致</span><br><span class="line">cluster-node-timeout 5000 # 5000毫秒</span><br><span class="line">appendonly yes #</span><br></pre></td></tr></table></figure></p><p> 简单操作<br>     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'s/7001/7002/g'</span> /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf &gt; <span class="regexp">/usr/</span>local/redis-cluster/<span class="number">7002</span>/redis.conf</span><br><span class="line">sed <span class="string">'s/7001/7003/g'</span> /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf &gt; <span class="regexp">/usr/</span>local/redis-cluster/<span class="number">7003</span>/redis.conf</span><br><span class="line">sed <span class="string">'s/7001/7004/g'</span> /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf &gt; <span class="regexp">/usr/</span>local/redis-cluster/<span class="number">7004</span>/redis.conf</span><br><span class="line">sed <span class="string">'s/7001/7005/g'</span> /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf &gt; <span class="regexp">/usr/</span>local/redis-cluster/<span class="number">7005</span>/redis.conf</span><br><span class="line">sed <span class="string">'s/7001/7006/g'</span> /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf &gt; <span class="regexp">/usr/</span>local/redis-cluster/<span class="number">7006</span>/redis.conf</span><br></pre></td></tr></table></figure></p><h2 id="6、由于redis使用到ruby命令，先需安装ruby"><a href="#6、由于redis使用到ruby命令，先需安装ruby" class="headerlink" title="6、由于redis使用到ruby命令，先需安装ruby"></a>6、由于redis使用到ruby命令，先需安装ruby</h2><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install ruby # 存在依赖，按y</span><br><span class="line">yum install rubygems # 存在依赖，按y</span><br><span class="line">gem install redis # 安装redis和ruby接口</span><br></pre></td></tr></table></figure></code></pre><p>安装失败 就进行下面操作:<br>     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">curl -L get.rvm.io | bash -s stable</span><br><span class="line">gpg --keyserver hkp:<span class="comment">//keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</span></span><br><span class="line">curl -sSL https:<span class="comment">//get.rvm.io | bash -s stable</span></span><br><span class="line">source /usr/local/rvm/scripts/rvm</span><br><span class="line">rvm list known</span><br><span class="line">rvm install <span class="number">2.3</span><span class="number">.0</span></span><br><span class="line">rvm use <span class="number">2.3</span><span class="number">.0</span></span><br><span class="line">rvm remove <span class="number">1.8</span><span class="number">.7</span></span><br><span class="line">ruby --version</span><br><span class="line">gem install redis</span><br><span class="line">yum install -y rubygems</span><br></pre></td></tr></table></figure></p><h2 id="7、启动6个redis"><a href="#7、启动6个redis" class="headerlink" title="7、启动6个redis"></a>7、启动6个redis</h2><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/redis/bin/redis-server /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf</span><br><span class="line">/usr/local/redis/bin/redis-server /usr/local/redis-cluster/<span class="number">7002</span>/redis.conf</span><br><span class="line">/usr/local/redis/bin/redis-server /usr/local/redis-cluster/<span class="number">7003</span>/redis.conf</span><br><span class="line">/usr/local/redis/bin/redis-server /usr/local/redis-cluster/<span class="number">7004</span>/redis.conf</span><br><span class="line">/usr/local/redis/bin/redis-server /usr/local/redis-cluster/<span class="number">7005</span>/redis.conf</span><br><span class="line">/usr/local/redis/bin/redis-server /usr/local/redis-cluster/<span class="number">7006</span>/redis.conf</span><br></pre></td></tr></table></figure></code></pre><p> 查看是否启动完成<br>      <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep redis</span><br></pre></td></tr></table></figure></p><p> 或<br>       <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tunpl | grep redis</span><br></pre></td></tr></table></figure></p><h2 id="8、创建集群"><a href="#8、创建集群" class="headerlink" title="8、创建集群"></a>8、创建集群</h2><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/redis3<span class="number">.0</span>/src/redis-trib.rb create --replicas <span class="number">1</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span>:<span class="number">7001</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span>:<span class="number">7002</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span>:<span class="number">7003</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span>:<span class="number">7004</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span>:<span class="number">7005</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span>:<span class="number">7006</span></span><br></pre></td></tr></table></figure></code></pre><p>  create表示创建<br>  1=主/从(比值)<br>  按顺序<br>  主节点：192.168.0.228:7001 192.168.0.228:7002 192.168.0.228:7003<br>  从节点：192.168.0.228:7004 192.168.0.228:7005 192.168.0.228:7006<br>  192.168.0.228:7004 是 192.168.0.228:7001 的从节点<br>  创建过程会询问，yes即可</p><h2 id="9、进入集群环境"><a href="#9、进入集群环境" class="headerlink" title="9、进入集群环境"></a>9、进入集群环境</h2><p>  进入redis客户端，-c 表示集群模式，-h 表示服务器地址， -p 表示端口<br>       <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/redis/bin/redis-cli -c -h <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span> -p <span class="number">7001</span></span><br></pre></td></tr></table></figure></p><p>  如果拒绝连接<br>第一步启动<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">redis-server /usr/local/redis-cluster/<span class="number">7001</span>/redis.conf</span><br><span class="line">redis-server /usr/local/redis-cluster/<span class="number">7002</span>/redis.conf</span><br><span class="line">redis-server /usr/local/redis-cluster/<span class="number">7003</span>/redis.conf</span><br><span class="line">redis-server /usr/local/redis-cluster/<span class="number">7004</span>/redis.conf</span><br><span class="line">redis-server /usr/local/redis-cluster/<span class="number">7005</span>/redis.conf</span><br><span class="line">redis-server /usr/local/redis-cluster/<span class="number">7006</span>/redis.conf</span><br><span class="line">redis-cli</span><br></pre></td></tr></table></figure></p><p>然后进入集群环境<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/redis/bin/redis-cli -c -h <span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span> -p <span class="number">7001</span></span><br></pre></td></tr></table></figure></p><p>  退出redis客户端<br>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">192.168</span><span class="number">.0</span><span class="number">.228</span>:<span class="number">7001</span>&gt; quit</span><br></pre></td></tr></table></figure></p><p>  关闭redis服务<br>     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/redis/bin/redis-cli shutdown</span><br></pre></td></tr></table></figure></p><p>  注：电脑性能不好，实际环境中自行改成不同机器IP即可收起</p>]]></content>
     
@@ -82,6 +58,8 @@
       
     
     </summary>
+    
+      <category term="redis" scheme="http://yoursite.com/categories/redis/"/>
     
     
   </entry>
@@ -161,31 +139,6 @@
   </entry>
   
   <entry>
-    <title>markdown的语法</title>
-    <link href="http://yoursite.com/2018/04/20/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2018/04/20/markdown的语法/</id>
-    <published>2018-04-20T02:04:16.000Z</published>
-    <updated>2018-05-08T02:50:45.570Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*或_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h2 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题</span><br><span class="line">============================</span><br><span class="line">这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>语法说明：<br>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。<a href="链接地址 “链接标题”">链接文字</a>’这样的形式。链接地址与链接标题前有一个空格。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk)</span><br><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk &quot;梵居闹市&quot;)</span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>使用 *，+，- 表示无序列表。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表项 一</span><br><span class="line">- 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p> 语法说明：</p><p>引用需要在被引用的文本前加上&gt;符号。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一个有两段文字的引用,</span><br><span class="line">&gt; 无意义的占行文字1.</span><br><span class="line">&gt; 无意义的占行文字2.</span><br><span class="line">&gt;</span><br><span class="line">&gt; 无意义的占行文字3.</span><br><span class="line">&gt; 无意义的占行文字4</span><br></pre></td></tr></table></figure><h2 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片Alt](图片地址 “图片Title”)</span><br></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>语法说明：</p><ol><li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li><li>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。</li><li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">学号|姓名|分数</span><br><span class="line">-|-|-</span><br><span class="line">小明|男|75</span><br><span class="line">小红|女|79</span><br><span class="line">小陆|男|92</span><br></pre></td></tr></table></figure><h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>语法说明：</p><ol><li>插入行内代码，即插入一个单词或者一句代码的情况，使用<code>code</code>这样的形式插入。</li><li>插入多行代码，可以使用缩进或者“<code>code “</code>,具体看示例。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C语言里的函数 <span class="string">`scanf()`</span> 怎么使用？</span><br></pre></td></tr></table></figure><h2 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">半方大的空白&amp;ensp;或&amp;#8194;</span><br><span class="line">全方大的空白&amp;emsp;或&amp;#8195;</span><br><span class="line">不断行的空白格&amp;nbsp;或&amp;#160;</span><br></pre></td></tr></table></figure><h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>语法描述：<br>在你准备跳转到的指定标题后插入锚点，然后在文档的其它地方写上连接到锚点的链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br><span class="line">跳转到[目录](#index)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;斜体和粗体&quot;&gt;&lt;a href=&quot;#斜体和粗体&quot; class=&quot;headerlink&quot; title=&quot;斜体和粗体&quot;&gt;&lt;/a&gt;斜体和粗体&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
-      
-    
-    </summary>
-    
-      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
-    
-    
-      <category term="markdown的语法" scheme="http://yoursite.com/tags/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vuejs项目的下载</title>
     <link href="http://yoursite.com/2018/04/20/vuejs%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yoursite.com/2018/04/20/vuejs项目的下载/</id>
@@ -218,6 +171,31 @@
   </entry>
   
   <entry>
+    <title>markdown的语法</title>
+    <link href="http://yoursite.com/2018/04/20/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/04/20/markdown的语法/</id>
+    <published>2018-04-20T02:04:16.000Z</published>
+    <updated>2018-05-08T02:50:45.570Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*或_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h2 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题</span><br><span class="line">============================</span><br><span class="line">这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>语法说明：<br>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。<a href="链接地址 “链接标题”">链接文字</a>’这样的形式。链接地址与链接标题前有一个空格。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk)</span><br><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk &quot;梵居闹市&quot;)</span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>使用 *，+，- 表示无序列表。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表项 一</span><br><span class="line">- 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p> 语法说明：</p><p>引用需要在被引用的文本前加上&gt;符号。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一个有两段文字的引用,</span><br><span class="line">&gt; 无意义的占行文字1.</span><br><span class="line">&gt; 无意义的占行文字2.</span><br><span class="line">&gt;</span><br><span class="line">&gt; 无意义的占行文字3.</span><br><span class="line">&gt; 无意义的占行文字4</span><br></pre></td></tr></table></figure><h2 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片Alt](图片地址 “图片Title”)</span><br></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>语法说明：</p><ol><li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li><li>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。</li><li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">学号|姓名|分数</span><br><span class="line">-|-|-</span><br><span class="line">小明|男|75</span><br><span class="line">小红|女|79</span><br><span class="line">小陆|男|92</span><br></pre></td></tr></table></figure><h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>语法说明：</p><ol><li>插入行内代码，即插入一个单词或者一句代码的情况，使用<code>code</code>这样的形式插入。</li><li>插入多行代码，可以使用缩进或者“<code>code “</code>,具体看示例。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C语言里的函数 <span class="string">`scanf()`</span> 怎么使用？</span><br></pre></td></tr></table></figure><h2 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">半方大的空白&amp;ensp;或&amp;#8194;</span><br><span class="line">全方大的空白&amp;emsp;或&amp;#8195;</span><br><span class="line">不断行的空白格&amp;nbsp;或&amp;#160;</span><br></pre></td></tr></table></figure><h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>语法描述：<br>在你准备跳转到的指定标题后插入锚点，然后在文档的其它地方写上连接到锚点的链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br><span class="line">跳转到[目录](#index)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;斜体和粗体&quot;&gt;&lt;a href=&quot;#斜体和粗体&quot; class=&quot;headerlink&quot; title=&quot;斜体和粗体&quot;&gt;&lt;/a&gt;斜体和粗体&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
+    
+    
+      <category term="markdown的语法" scheme="http://yoursite.com/tags/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo的基本使用</title>
     <link href="http://yoursite.com/2018/04/18/Hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2018/04/18/Hexo的基本使用/</id>
@@ -244,8 +222,8 @@
   
   <entry>
     <title>GitHub的基本使用</title>
-    <link href="http://yoursite.com/2018/04/18/GitHub%E7%9A%84SSH%E6%8F%90%E4%BA%A4%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2018/04/18/GitHub的SSH提交配置/</id>
+    <link href="http://yoursite.com/2018/04/18/GitHub%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/04/18/GitHub的基本使用/</id>
     <published>2018-04-18T09:09:08.000Z</published>
     <updated>2018-05-09T02:18:14.590Z</updated>
     
@@ -278,131 +256,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/09/hello-world2/"/>
-    <id>http://yoursite.com/2018/04/09/hello-world2/</id>
-    <published>2018-04-09T10:49:26.000Z</published>
-    <updated>2018-04-09T12:38:36.283Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://yoursite.com/categories/Diary/"/>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/09/hello-world4/"/>
-    <id>http://yoursite.com/2018/04/09/hello-world4/</id>
-    <published>2018-04-09T10:49:26.000Z</published>
-    <updated>2018-04-09T12:38:36.282Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://yoursite.com/categories/Diary/"/>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/09/hello-world3/"/>
-    <id>http://yoursite.com/2018/04/09/hello-world3/</id>
-    <published>2018-04-09T10:49:26.000Z</published>
-    <updated>2018-04-09T12:38:36.282Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://yoursite.com/categories/Diary/"/>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/09/hello-world5/"/>
-    <id>http://yoursite.com/2018/04/09/hello-world5/</id>
-    <published>2018-04-09T10:49:26.000Z</published>
-    <updated>2018-04-09T12:38:36.282Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://yoursite.com/categories/Diary/"/>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/04/09/hello-world/"/>
-    <id>http://yoursite.com/2018/04/09/hello-world/</id>
-    <published>2018-04-09T10:49:26.000Z</published>
-    <updated>2018-04-09T12:37:43.197Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://yoursite.com/categories/Diary/"/>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
