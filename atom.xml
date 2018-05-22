@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-22T04:58:10.594Z</updated>
+  <updated>2018-05-22T07:12:54.376Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>oracle创建数据库(配置)</title>
-    <link href="http://yoursite.com/2018/05/22/oracle%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93-%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com/2018/05/22/oracle创建数据库-配置/</id>
-    <published>2018-05-22T04:47:11.000Z</published>
-    <updated>2018-05-22T04:58:10.594Z</updated>
+    <title>link(图片)</title>
+    <link href="http://yoursite.com/2018/05/22/link-%E5%9B%BE%E7%89%87/"/>
+    <id>http://yoursite.com/2018/05/22/link-图片/</id>
+    <published>2018-05-22T07:09:43.000Z</published>
+    <updated>2018-05-22T07:12:54.376Z</updated>
     
-    <content type="html"><![CDATA[<p>通过配置来创建数据库 Database Configuration Assistant</p><h1 id="oracle使用的步骤"><a href="#oracle使用的步骤" class="headerlink" title="oracle使用的步骤"></a>oracle使用的步骤</h1><p>1,在开始-》所有程序中找到Oracle下级菜单-》配置和移植工具–》Database Configuration Assistant<br><img src="/images/oracle/create/config/1.png" alt="oracle图片"><br>2,首先会进入首页，只需要点击下一步即可，进入到真正配置的第一步。在这步我们选择：创建数据库，点击下一步<br><img src="/images/oracle/create/config/2.png" alt="oracle图片"><br>3,第二步是选择要创建的数据库的模板，Oracle提供的带数据文件的模板，里面包含了预先创建的数据库，这样可以很快速的完成数据库的创建。一般情况下，我们选择：一般用途或事物处理<br><img src="/images/oracle/create/config/3.png" alt="oracle图片"><br>4,这一步需要我们设置数据库名和SID，输入数据库名后自动生成相应的SID,但是我们也可以自己修改<br><img src="/images/oracle/create/config/4.png" alt="oracle图片"><br>5,接下来的一步，直接使用默认配置即可<br><img src="/images/oracle/create/config/5.png" alt="oracle图片"><br>6,进入配置数据库口令的步骤，可以选择为不同账户设置不同的口令，也可以统一所有的口令。如果不设置则会使用默认的口令。此处为了安全考虑，建议大家设置一下口令(Admin123456)。接着点击下一步，接下来的步骤使用默认设置即可<br><img src="/images/oracle/create/config/6.png" alt="oracle图片"><br><img src="/images/oracle/create/config/7.png" alt="oracle图片"><br>7,第7-10步包含了数据库恢复区、内存等的设置，直接使用Oracle的默认值即可。在第11步，勾选创建数据库的同时，也能选择性的将自己建立的数据库存为数据库模板，或者生成数据库创建的脚本。点击完成，等待数据库初始化创建完成，关闭窗口即可。<br><img src="/images/oracle/create/config/8.png" alt="oracle图片"><br>8,最后可以使用我们创建的数据库进行登录了，登录后可以进行建表等操作啦。<br>Oracle创建数据库很多步骤直接使用默认的设置即可满足日常工作学习的需求了，自己另外配置需消耗较多时间</p>]]></content>
+    <content type="html"><![CDATA[<p>图片链接地址<br><a href="http://www.bitbug.net/" target="_blank" rel="noopener">在线制作ico图标</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;通过配置来创建数据库 Database Configuration Assistant&lt;/p&gt;
-&lt;h1 id=&quot;oracle使用的步骤&quot;&gt;&lt;a href=&quot;#oracle使用的步骤&quot; class=&quot;headerlink&quot; title=&quot;oracle使用的步骤&quot;&gt;&lt;/a&gt;or
+        &lt;p&gt;图片链接地址&lt;br&gt;&lt;a href=&quot;http://www.bitbug.net/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;在线制作ico图标&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="link" scheme="http://yoursite.com/categories/link/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>oracle数据库创建(配置)</title>
+    <link href="http://yoursite.com/2018/05/22/oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9B%E5%BB%BA-%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2018/05/22/oracle数据库创建-配置/</id>
+    <published>2018-05-22T04:47:11.000Z</published>
+    <updated>2018-05-22T07:57:13.238Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="通过配置来创建数据库-Database-Configuration-Assistant"><a href="#通过配置来创建数据库-Database-Configuration-Assistant" class="headerlink" title="通过配置来创建数据库 Database Configuration Assistant"></a>通过配置来创建数据库 Database Configuration Assistant</h1><pre><code>oracle使用的步骤</code></pre><p>1,在开始-》所有程序中找到Oracle下级菜单-》配置和移植工具–》Database Configuration Assistant<br><img src="/images/oracle/create/config/1.png" alt="oracle图片"><br>2,首先会进入首页，只需要点击下一步即可，进入到真正配置的第一步。在这步我们选择：创建数据库，点击下一步<br><img src="/images/oracle/create/config/2.png" alt="oracle图片"><br>3,第二步是选择要创建的数据库的模板，Oracle提供的带数据文件的模板，里面包含了预先创建的数据库，这样可以很快速的完成数据库的创建。一般情况下，我们选择：一般用途或事物处理<br><img src="/images/oracle/create/config/3.png" alt="oracle图片"><br>4,这一步需要我们设置数据库名和SID，输入数据库名后自动生成相应的SID,但是我们也可以自己修改<br><img src="/images/oracle/create/config/4.png" alt="oracle图片"><br>5,接下来的一步，直接使用默认配置即可<br><img src="/images/oracle/create/config/5.png" alt="oracle图片"><br>6,进入配置数据库口令的步骤，可以选择为不同账户设置不同的口令，也可以统一所有的口令。如果不设置则会使用默认的口令。此处为了安全考虑，建议大家设置一下口令(Admin123456)。接着点击下一步，接下来的步骤使用默认设置即可<br><img src="/images/oracle/create/config/6.png" alt="oracle图片"><br><img src="/images/oracle/create/config/7.png" alt="oracle图片"><br>7,第7-10步包含了数据库恢复区、内存等的设置，直接使用Oracle的默认值即可。在第11步，勾选创建数据库的同时，也能选择性的将自己建立的数据库存为数据库模板，或者生成数据库创建的脚本。点击完成，等待数据库初始化创建完成，关闭窗口即可。<br><img src="/images/oracle/create/config/8.png" alt="oracle图片"><br>8,最后可以使用我们创建的数据库进行登录了，登录后可以进行建表等操作啦。<br>Oracle创建数据库很多步骤直接使用默认的设置即可满足日常工作学习的需求了，自己另外配置需消耗较多时间</p><h1 id="创建表空间"><a href="#创建表空间" class="headerlink" title="创建表空间"></a>创建表空间</h1><p>  删除表空间<br>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop tablespace WORKFLOW01 including contents;</span><br></pre></td></tr></table></figure></p><pre><code>创建固定表空间 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLESPACE <span class="string">"WORKFLOW01"</span></span><br><span class="line">LOGGING DATAFILE <span class="string">'F:\oracle\work\WORKFLOW01.ora'</span> SIZE <span class="number">500</span>m autoextend on</span><br><span class="line">next <span class="number">32</span>m maxsize <span class="number">1024</span>m</span><br><span class="line">extent management local;</span><br><span class="line">commit;</span><br></pre></td></tr></table></figure></code></pre><h1 id="创建实例授权"><a href="#创建实例授权" class="headerlink" title="创建实例授权"></a>创建实例授权</h1><p>删除用户<br>     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop user myroot cascade;</span><br></pre></td></tr></table></figure></p><p>创建用户 Create the myroot<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create user myroot</span><br><span class="line">identified by <span class="string">"123456"</span></span><br><span class="line"><span class="keyword">default</span> tablespace WORKFLOW01</span><br><span class="line">temporary tablespace TEMP</span><br><span class="line">profile DEFAULT;</span><br></pre></td></tr></table></figure></p><p>授权 Grant/Revoke role privileges<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant connect to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant dba to myroot <span class="keyword">with</span> admin option;</span><br></pre></td></tr></table></figure></p><p>授权 Grant/Revoke system privileges<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">grant alter any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant create any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant <span class="keyword">delete</span> any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant update any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant drop any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant insert any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant select any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant unlimited tablespace to myroot <span class="keyword">with</span> admin option;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;通过配置来创建数据库-Database-Configuration-Assistant&quot;&gt;&lt;a href=&quot;#通过配置来创建数据库-Database-Configuration-Assistant&quot; class=&quot;headerlink&quot; title=&quot;通过配置来创
       
     
     </summary>
@@ -163,6 +186,31 @@
   </entry>
   
   <entry>
+    <title>markdown的语法</title>
+    <link href="http://yoursite.com/2018/04/20/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/04/20/markdown的语法/</id>
+    <published>2018-04-20T02:04:16.000Z</published>
+    <updated>2018-05-08T02:50:45.570Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*或_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h2 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题</span><br><span class="line">============================</span><br><span class="line">这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>语法说明：<br>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。<a href="链接地址 “链接标题”">链接文字</a>’这样的形式。链接地址与链接标题前有一个空格。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk)</span><br><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk &quot;梵居闹市&quot;)</span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>使用 *，+，- 表示无序列表。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表项 一</span><br><span class="line">- 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p> 语法说明：</p><p>引用需要在被引用的文本前加上&gt;符号。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一个有两段文字的引用,</span><br><span class="line">&gt; 无意义的占行文字1.</span><br><span class="line">&gt; 无意义的占行文字2.</span><br><span class="line">&gt;</span><br><span class="line">&gt; 无意义的占行文字3.</span><br><span class="line">&gt; 无意义的占行文字4</span><br></pre></td></tr></table></figure><h2 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片Alt](图片地址 “图片Title”)</span><br></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>语法说明：</p><ol><li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li><li>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。</li><li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">学号|姓名|分数</span><br><span class="line">-|-|-</span><br><span class="line">小明|男|75</span><br><span class="line">小红|女|79</span><br><span class="line">小陆|男|92</span><br></pre></td></tr></table></figure><h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>语法说明：</p><ol><li>插入行内代码，即插入一个单词或者一句代码的情况，使用<code>code</code>这样的形式插入。</li><li>插入多行代码，可以使用缩进或者“<code>code “</code>,具体看示例。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C语言里的函数 <span class="string">`scanf()`</span> 怎么使用？</span><br></pre></td></tr></table></figure><h2 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">半方大的空白&amp;ensp;或&amp;#8194;</span><br><span class="line">全方大的空白&amp;emsp;或&amp;#8195;</span><br><span class="line">不断行的空白格&amp;nbsp;或&amp;#160;</span><br></pre></td></tr></table></figure><h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>语法描述：<br>在你准备跳转到的指定标题后插入锚点，然后在文档的其它地方写上连接到锚点的链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br><span class="line">跳转到[目录](#index)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;斜体和粗体&quot;&gt;&lt;a href=&quot;#斜体和粗体&quot; class=&quot;headerlink&quot; title=&quot;斜体和粗体&quot;&gt;&lt;/a&gt;斜体和粗体&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
+    
+    
+      <category term="markdown的语法" scheme="http://yoursite.com/tags/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vuejs项目的下载</title>
     <link href="http://yoursite.com/2018/04/20/vuejs%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yoursite.com/2018/04/20/vuejs项目的下载/</id>
@@ -191,31 +239,6 @@
     
     
       <category term="vuejs项目的下载" scheme="http://yoursite.com/tags/vuejs%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown的语法</title>
-    <link href="http://yoursite.com/2018/04/20/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2018/04/20/markdown的语法/</id>
-    <published>2018-04-20T02:04:16.000Z</published>
-    <updated>2018-05-08T02:50:45.570Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*或_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h2 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题</span><br><span class="line">============================</span><br><span class="line">这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>语法说明：<br>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。<a href="链接地址 “链接标题”">链接文字</a>’这样的形式。链接地址与链接标题前有一个空格。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk)</span><br><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk &quot;梵居闹市&quot;)</span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>使用 *，+，- 表示无序列表。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表项 一</span><br><span class="line">- 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p> 语法说明：</p><p>引用需要在被引用的文本前加上&gt;符号。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一个有两段文字的引用,</span><br><span class="line">&gt; 无意义的占行文字1.</span><br><span class="line">&gt; 无意义的占行文字2.</span><br><span class="line">&gt;</span><br><span class="line">&gt; 无意义的占行文字3.</span><br><span class="line">&gt; 无意义的占行文字4</span><br></pre></td></tr></table></figure><h2 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片Alt](图片地址 “图片Title”)</span><br></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>语法说明：</p><ol><li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li><li>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。</li><li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">学号|姓名|分数</span><br><span class="line">-|-|-</span><br><span class="line">小明|男|75</span><br><span class="line">小红|女|79</span><br><span class="line">小陆|男|92</span><br></pre></td></tr></table></figure><h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>语法说明：</p><ol><li>插入行内代码，即插入一个单词或者一句代码的情况，使用<code>code</code>这样的形式插入。</li><li>插入多行代码，可以使用缩进或者“<code>code “</code>,具体看示例。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C语言里的函数 <span class="string">`scanf()`</span> 怎么使用？</span><br></pre></td></tr></table></figure><h2 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">半方大的空白&amp;ensp;或&amp;#8194;</span><br><span class="line">全方大的空白&amp;emsp;或&amp;#8195;</span><br><span class="line">不断行的空白格&amp;nbsp;或&amp;#160;</span><br></pre></td></tr></table></figure><h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>语法描述：<br>在你准备跳转到的指定标题后插入锚点，然后在文档的其它地方写上连接到锚点的链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br><span class="line">跳转到[目录](#index)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;斜体和粗体&quot;&gt;&lt;a href=&quot;#斜体和粗体&quot; class=&quot;headerlink&quot; title=&quot;斜体和粗体&quot;&gt;&lt;/a&gt;斜体和粗体&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
-      
-    
-    </summary>
-    
-      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
-    
-    
-      <category term="markdown的语法" scheme="http://yoursite.com/tags/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
