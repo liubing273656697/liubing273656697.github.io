@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-22T09:39:33.467Z</updated>
+  <updated>2018-05-23T02:57:34.246Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,116 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql配置</title>
+    <link href="http://yoursite.com/2018/05/23/mysql%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2018/05/23/mysql配置/</id>
+    <published>2018-05-23T02:57:08.000Z</published>
+    <updated>2018-05-23T02:57:34.246Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub操作指南</title>
+    <link href="http://yoursite.com/2018/05/23/GitHub%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/"/>
+    <id>http://yoursite.com/2018/05/23/GitHub操作指南/</id>
+    <published>2018-05-23T02:53:33.000Z</published>
+    <updated>2018-05-23T02:54:19.006Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;注册&quot;&gt;&lt;a href=&quot;#注册&quot; class=&quot;headerlink&quot; title=&quot;注册&quot;&gt;&lt;/a&gt;注册&lt;/h1&gt;
+      
+    
+    </summary>
+    
+      <category term="GitHub" scheme="http://yoursite.com/categories/GitHub/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>link(常用)</title>
+    <link href="http://yoursite.com/2018/05/23/link-%E5%B8%B8%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/05/23/link-常用/</id>
+    <published>2018-05-23T02:45:11.000Z</published>
+    <updated>2018-05-23T02:46:52.140Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="常用地址"><a href="#常用地址" class="headerlink" title="常用地址"></a>常用地址</h1><p><a href="http://fanyi.baidu.com/" target="_blank" rel="noopener">百度翻译</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;常用地址&quot;&gt;&lt;a href=&quot;#常用地址&quot; class=&quot;headerlink&quot; title=&quot;常用地址&quot;&gt;&lt;/a&gt;常用地址&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://fanyi.baidu.com/&quot; target=&quot;_blank&quot; rel=&quot;noopene
+      
+    
+    </summary>
+    
+      <category term="link" scheme="http://yoursite.com/categories/link/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>oraclc登陆用户创建objects</title>
+    <link href="http://yoursite.com/2018/05/23/oraclc%E7%99%BB%E9%99%86%E7%94%A8%E6%88%B7%E5%88%9B%E5%BB%BAobjects/"/>
+    <id>http://yoursite.com/2018/05/23/oraclc登陆用户创建objects/</id>
+    <published>2018-05-23T02:39:16.000Z</published>
+    <updated>2018-05-23T02:44:39.349Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里所有操作需要用户登陆,用户myroot,口令123456</p><h1 id="创建函数"><a href="#创建函数" class="headerlink" title="创建函数"></a>创建函数</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这里所有操作需要用户登陆,用户myroot,口令123456&lt;/p&gt;
+&lt;h1 id=&quot;创建函数&quot;&gt;&lt;a href=&quot;#创建函数&quot; class=&quot;headerlink&quot; title=&quot;创建函数&quot;&gt;&lt;/a&gt;创建函数&lt;/h1&gt;&lt;figure class=&quot;highlight ja
+      
+    
+    </summary>
+    
+      <category term="oracle" scheme="http://yoursite.com/categories/oracle/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>link(github)</title>
+    <link href="http://yoursite.com/2018/05/23/link-github/"/>
+    <id>http://yoursite.com/2018/05/23/link-github/</id>
+    <published>2018-05-23T02:23:16.000Z</published>
+    <updated>2018-05-23T02:26:20.504Z</updated>
+    
+    <content type="html"><![CDATA[<p>github链接地址<br><a href="https://fengxiuwei.github.io/" target="_blank" rel="noopener">秀秀的博客</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;github链接地址&lt;br&gt;&lt;a href=&quot;https://fengxiuwei.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;秀秀的博客&lt;/a&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="link" scheme="http://yoursite.com/categories/link/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>oracle数据库连接</title>
@@ -69,9 +179,9 @@
     <link href="http://yoursite.com/2018/05/22/oracle%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9B%E5%BB%BA-%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2018/05/22/oracle数据库创建-配置/</id>
     <published>2018-05-22T04:47:11.000Z</published>
-    <updated>2018-05-22T07:57:13.238Z</updated>
+    <updated>2018-05-23T02:35:32.119Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="通过配置来创建数据库-Database-Configuration-Assistant"><a href="#通过配置来创建数据库-Database-Configuration-Assistant" class="headerlink" title="通过配置来创建数据库 Database Configuration Assistant"></a>通过配置来创建数据库 Database Configuration Assistant</h1><pre><code>oracle使用的步骤</code></pre><p>1,在开始-》所有程序中找到Oracle下级菜单-》配置和移植工具–》Database Configuration Assistant<br><img src="/images/oracle/create/config/1.png" alt="oracle图片"><br>2,首先会进入首页，只需要点击下一步即可，进入到真正配置的第一步。在这步我们选择：创建数据库，点击下一步<br><img src="/images/oracle/create/config/2.png" alt="oracle图片"><br>3,第二步是选择要创建的数据库的模板，Oracle提供的带数据文件的模板，里面包含了预先创建的数据库，这样可以很快速的完成数据库的创建。一般情况下，我们选择：一般用途或事物处理<br><img src="/images/oracle/create/config/3.png" alt="oracle图片"><br>4,这一步需要我们设置数据库名和SID，输入数据库名后自动生成相应的SID,但是我们也可以自己修改<br><img src="/images/oracle/create/config/4.png" alt="oracle图片"><br>5,接下来的一步，直接使用默认配置即可<br><img src="/images/oracle/create/config/5.png" alt="oracle图片"><br>6,进入配置数据库口令的步骤，可以选择为不同账户设置不同的口令，也可以统一所有的口令。如果不设置则会使用默认的口令。此处为了安全考虑，建议大家设置一下口令(Admin123456)。接着点击下一步，接下来的步骤使用默认设置即可<br><img src="/images/oracle/create/config/6.png" alt="oracle图片"><br><img src="/images/oracle/create/config/7.png" alt="oracle图片"><br>7,第7-10步包含了数据库恢复区、内存等的设置，直接使用Oracle的默认值即可。在第11步，勾选创建数据库的同时，也能选择性的将自己建立的数据库存为数据库模板，或者生成数据库创建的脚本。点击完成，等待数据库初始化创建完成，关闭窗口即可。<br><img src="/images/oracle/create/config/8.png" alt="oracle图片"><br>8,最后可以使用我们创建的数据库进行登录了，登录后可以进行建表等操作啦。<br>Oracle创建数据库很多步骤直接使用默认的设置即可满足日常工作学习的需求了，自己另外配置需消耗较多时间</p><h1 id="创建表空间"><a href="#创建表空间" class="headerlink" title="创建表空间"></a>创建表空间</h1><p>  删除表空间<br>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop tablespace WORKFLOW01 including contents;</span><br></pre></td></tr></table></figure></p><pre><code>创建固定表空间 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLESPACE <span class="string">"WORKFLOW01"</span></span><br><span class="line">LOGGING DATAFILE <span class="string">'F:\oracle\work\WORKFLOW01.ora'</span> SIZE <span class="number">500</span>m autoextend on</span><br><span class="line">next <span class="number">32</span>m maxsize <span class="number">1024</span>m</span><br><span class="line">extent management local;</span><br><span class="line">commit;</span><br></pre></td></tr></table></figure></code></pre><h1 id="创建实例授权"><a href="#创建实例授权" class="headerlink" title="创建实例授权"></a>创建实例授权</h1><p>删除用户<br>     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop user myroot cascade;</span><br></pre></td></tr></table></figure></p><p>创建用户 Create the myroot<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create user myroot</span><br><span class="line">identified by <span class="string">"123456"</span></span><br><span class="line"><span class="keyword">default</span> tablespace WORKFLOW01</span><br><span class="line">temporary tablespace TEMP</span><br><span class="line">profile DEFAULT;</span><br></pre></td></tr></table></figure></p><p>授权 Grant/Revoke role privileges<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant connect to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant dba to myroot <span class="keyword">with</span> admin option;</span><br></pre></td></tr></table></figure></p><p>授权 Grant/Revoke system privileges<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">grant alter any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant create any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant <span class="keyword">delete</span> any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant update any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant drop any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant insert any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant select any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant unlimited tablespace to myroot <span class="keyword">with</span> admin option;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="通过配置来创建数据库-Database-Configuration-Assistant"><a href="#通过配置来创建数据库-Database-Configuration-Assistant" class="headerlink" title="通过配置来创建数据库 Database Configuration Assistant"></a>通过配置来创建数据库 Database Configuration Assistant</h1><pre><code>oracle使用的步骤</code></pre><p>1,在开始-》所有程序中找到Oracle下级菜单-》配置和移植工具–》Database Configuration Assistant<br><img src="/images/oracle/create/config/1.png" alt="oracle图片"><br>2,首先会进入首页，只需要点击下一步即可，进入到真正配置的第一步。在这步我们选择：创建数据库，点击下一步<br><img src="/images/oracle/create/config/2.png" alt="oracle图片"><br>3,第二步是选择要创建的数据库的模板，Oracle提供的带数据文件的模板，里面包含了预先创建的数据库，这样可以很快速的完成数据库的创建。一般情况下，我们选择：一般用途或事物处理<br><img src="/images/oracle/create/config/3.png" alt="oracle图片"><br>4,这一步需要我们设置数据库名和SID，输入数据库名后自动生成相应的SID,但是我们也可以自己修改<br><img src="/images/oracle/create/config/4.png" alt="oracle图片"><br>5,接下来的一步，直接使用默认配置即可<br><img src="/images/oracle/create/config/5.png" alt="oracle图片"><br>6,进入配置数据库口令的步骤，可以选择为不同账户设置不同的口令，也可以统一所有的口令。如果不设置则会使用默认的口令。此处为了安全考虑，建议大家设置一下口令(Admin123456)。接着点击下一步，接下来的步骤使用默认设置即可<br><img src="/images/oracle/create/config/6.png" alt="oracle图片"><br><img src="/images/oracle/create/config/7.png" alt="oracle图片"><br>7,第7-10步包含了数据库恢复区、内存等的设置，直接使用Oracle的默认值即可。在第11步，勾选创建数据库的同时，也能选择性的将自己建立的数据库存为数据库模板，或者生成数据库创建的脚本。点击完成，等待数据库初始化创建完成，关闭窗口即可。<br><img src="/images/oracle/create/config/8.png" alt="oracle图片"><br>8,最后可以使用我们创建的数据库进行登录了，登录后可以进行建表等操作啦。<br>Oracle创建数据库很多步骤直接使用默认的设置即可满足日常工作学习的需求了，自己另外配置需消耗较多时间</p><h1 id="创建表空间"><a href="#创建表空间" class="headerlink" title="创建表空间"></a>创建表空间</h1><p>需要使用SYS登陆,创建数据库时的口令Admin123456</p><p>  删除表空间<br>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop tablespace WORKFLOW01 including contents;</span><br></pre></td></tr></table></figure></p><pre><code>创建固定表空间 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLESPACE <span class="string">"WORKFLOW01"</span></span><br><span class="line">LOGGING DATAFILE <span class="string">'D:\tablespace\oracle\work\WORKFLOW01.ora'</span> SIZE <span class="number">500</span>m autoextend on</span><br><span class="line">next <span class="number">32</span>m maxsize <span class="number">1024</span>m</span><br><span class="line">extent management local;</span><br><span class="line">commit;</span><br></pre></td></tr></table></figure></code></pre><h1 id="创建实例授权"><a href="#创建实例授权" class="headerlink" title="创建实例授权"></a>创建实例授权</h1><p>需要使用SYS登陆,创建数据库时的口令Admin123456</p><p>删除用户<br>     <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop user myroot cascade;</span><br></pre></td></tr></table></figure></p><p>创建用户 Create the myroot<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create user myroot</span><br><span class="line">identified by <span class="string">"123456"</span></span><br><span class="line"><span class="keyword">default</span> tablespace WORKFLOW01</span><br><span class="line">temporary tablespace TEMP</span><br><span class="line">profile DEFAULT;</span><br></pre></td></tr></table></figure></p><p>授权 Grant/Revoke role privileges<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant connect to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant dba to myroot <span class="keyword">with</span> admin option;</span><br></pre></td></tr></table></figure></p><p>授权 Grant/Revoke system privileges<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">grant alter any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant create any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant <span class="keyword">delete</span> any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant update any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant drop any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant insert any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant select any table to myroot <span class="keyword">with</span> admin option;</span><br><span class="line">grant unlimited tablespace to myroot <span class="keyword">with</span> admin option;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -210,6 +320,31 @@
   </entry>
   
   <entry>
+    <title>markdown的语法</title>
+    <link href="http://yoursite.com/2018/04/20/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/04/20/markdown的语法/</id>
+    <published>2018-04-20T02:04:16.000Z</published>
+    <updated>2018-05-08T02:50:45.570Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*或_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h2 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题</span><br><span class="line">============================</span><br><span class="line">这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>语法说明：<br>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。<a href="链接地址 “链接标题”">链接文字</a>’这样的形式。链接地址与链接标题前有一个空格。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk)</span><br><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk &quot;梵居闹市&quot;)</span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>使用 *，+，- 表示无序列表。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表项 一</span><br><span class="line">- 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p> 语法说明：</p><p>引用需要在被引用的文本前加上&gt;符号。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一个有两段文字的引用,</span><br><span class="line">&gt; 无意义的占行文字1.</span><br><span class="line">&gt; 无意义的占行文字2.</span><br><span class="line">&gt;</span><br><span class="line">&gt; 无意义的占行文字3.</span><br><span class="line">&gt; 无意义的占行文字4</span><br></pre></td></tr></table></figure><h2 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片Alt](图片地址 “图片Title”)</span><br></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>语法说明：</p><ol><li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li><li>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。</li><li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">学号|姓名|分数</span><br><span class="line">-|-|-</span><br><span class="line">小明|男|75</span><br><span class="line">小红|女|79</span><br><span class="line">小陆|男|92</span><br></pre></td></tr></table></figure><h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>语法说明：</p><ol><li>插入行内代码，即插入一个单词或者一句代码的情况，使用<code>code</code>这样的形式插入。</li><li>插入多行代码，可以使用缩进或者“<code>code “</code>,具体看示例。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C语言里的函数 <span class="string">`scanf()`</span> 怎么使用？</span><br></pre></td></tr></table></figure><h2 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">半方大的空白&amp;ensp;或&amp;#8194;</span><br><span class="line">全方大的空白&amp;emsp;或&amp;#8195;</span><br><span class="line">不断行的空白格&amp;nbsp;或&amp;#160;</span><br></pre></td></tr></table></figure><h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>语法描述：<br>在你准备跳转到的指定标题后插入锚点，然后在文档的其它地方写上连接到锚点的链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br><span class="line">跳转到[目录](#index)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;斜体和粗体&quot;&gt;&lt;a href=&quot;#斜体和粗体&quot; class=&quot;headerlink&quot; title=&quot;斜体和粗体&quot;&gt;&lt;/a&gt;斜体和粗体&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
+    
+    
+      <category term="markdown的语法" scheme="http://yoursite.com/tags/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vuejs项目的下载</title>
     <link href="http://yoursite.com/2018/04/20/vuejs%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yoursite.com/2018/04/20/vuejs项目的下载/</id>
@@ -242,27 +377,27 @@
   </entry>
   
   <entry>
-    <title>markdown的语法</title>
-    <link href="http://yoursite.com/2018/04/20/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2018/04/20/markdown的语法/</id>
-    <published>2018-04-20T02:04:16.000Z</published>
-    <updated>2018-05-08T02:50:45.570Z</updated>
+    <title>Hexo的基本使用</title>
+    <link href="http://yoursite.com/2018/04/18/Hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/04/18/Hexo的基本使用/</id>
+    <published>2018-04-18T09:09:08.000Z</published>
+    <updated>2018-05-08T02:54:06.697Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*或_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h2 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题</span><br><span class="line">============================</span><br><span class="line">这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br><span class="line"></span><br><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>语法说明：<br>[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字。<a href="链接地址 “链接标题”">链接文字</a>’这样的形式。链接地址与链接标题前有一个空格。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk)</span><br><span class="line">欢迎来到[梵居闹市](http://blog.leanote.com/freewalk &quot;梵居闹市&quot;)</span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>使用 *，+，- 表示无序列表。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表项 一</span><br><span class="line">- 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p> 语法说明：</p><p>引用需要在被引用的文本前加上&gt;符号。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一个有两段文字的引用,</span><br><span class="line">&gt; 无意义的占行文字1.</span><br><span class="line">&gt; 无意义的占行文字2.</span><br><span class="line">&gt;</span><br><span class="line">&gt; 无意义的占行文字3.</span><br><span class="line">&gt; 无意义的占行文字4</span><br></pre></td></tr></table></figure><h2 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片Alt](图片地址 “图片Title”)</span><br></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>语法说明：</p><ol><li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li><li>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。</li><li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">学号|姓名|分数</span><br><span class="line">-|-|-</span><br><span class="line">小明|男|75</span><br><span class="line">小红|女|79</span><br><span class="line">小陆|男|92</span><br></pre></td></tr></table></figure><h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>语法说明：</p><ol><li>插入行内代码，即插入一个单词或者一句代码的情况，使用<code>code</code>这样的形式插入。</li><li>插入多行代码，可以使用缩进或者“<code>code “</code>,具体看示例。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C语言里的函数 <span class="string">`scanf()`</span> 怎么使用？</span><br></pre></td></tr></table></figure><h2 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">半方大的空白&amp;ensp;或&amp;#8194;</span><br><span class="line">全方大的空白&amp;emsp;或&amp;#8195;</span><br><span class="line">不断行的空白格&amp;nbsp;或&amp;#160;</span><br></pre></td></tr></table></figure><h2 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h2><p>语法描述：<br>在你准备跳转到的指定标题后插入锚点，然后在文档的其它地方写上连接到锚点的链接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br><span class="line">跳转到[目录](#index)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="Hexo相关的网站"><a href="#Hexo相关的网站" class="headerlink" title="Hexo相关的网站"></a>Hexo相关的网站</h2><p><a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/commands.html</a></p><h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;  hexo new post "新建一篇文章"  #新建一篇文章</span><br><span class="line">hexo generate  简写 hexo g  #生成静态文件</span><br><span class="line">hexo server #启动服务器</span><br><span class="line">hexo deploy 简写 hexo d #部署网站</span><br><span class="line">hexo clean #清理缓存文件和已生成静态的文件</span><br><span class="line">hexo version #显示hexo的版本</span><br></pre></td></tr></table></figure><h2 id="本地图片的使用"><a href="#本地图片的使用" class="headerlink" title="本地图片的使用"></a>本地图片的使用</h2><p>主配置_config.yml文件中将post_asset_folder:true</p><p>运行下面代码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:<span class="comment">//github.com/CodeFalling/hexo-asset-image –save</span></span><br></pre></td></tr></table></figure><p>图片的路径写法：”/images/hexo/bg.jpg”</p><p><img src="/images/hexo/hexoimg.png" alt="hexo图片"></p><h2 id="Hexo-主题安装"><a href="#Hexo-主题安装" class="headerlink" title="Hexo 主题安装"></a>Hexo 主题安装</h2><h2 id="主题的筛选"><a href="#主题的筛选" class="headerlink" title="主题的筛选"></a>主题的筛选</h2><p>Hexo主题 ( <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> )页面,可以欣赏到很多很优秀的主题</p><p><img src="/images/hexo/hexotheme.png" alt="hexo主题"></p><h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>点击图片,就会跳到这个主题的博客,看到实际的效果<br>下载这个主题,就点击主题文字,进入主题Github页面,然后复制下载地址</p><p><img src="/images/hexo/downloadtheme.png" alt="下载hexo主题"></p><p>进入blog目录,克隆主题到本地</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:<span class="comment">//github.com/TongchengQiu/hexo-theme-another.git themes/another</span></span><br></pre></td></tr></table></figure><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>修改blog根目录的_config.yml,将theme修改为another</p><p><em>注意: 某些主题可能需要安装Node.js的插件,在安装主题时,最好在主题的Githu主页看看安装步骤</em></p><p><img src="/images/hexo/edittheme.png" alt="hexo主题"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;斜体和粗体&quot;&gt;&lt;a href=&quot;#斜体和粗体&quot; class=&quot;headerlink&quot; title=&quot;斜体和粗体&quot;&gt;&lt;/a&gt;斜体和粗体&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+        &lt;h2 id=&quot;Hexo相关的网站&quot;&gt;&lt;a href=&quot;#Hexo相关的网站&quot; class=&quot;headerlink&quot; title=&quot;Hexo相关的网站&quot;&gt;&lt;/a&gt;Hexo相关的网站&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/comman
       
     
     </summary>
     
-      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
     
     
-      <category term="markdown的语法" scheme="http://yoursite.com/tags/markdown%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+      <category term="Hexo的基本使用" scheme="http://yoursite.com/tags/Hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
@@ -288,31 +423,6 @@
     
     
       <category term="GitHub的基本使用" scheme="http://yoursite.com/tags/GitHub%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo的基本使用</title>
-    <link href="http://yoursite.com/2018/04/18/Hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2018/04/18/Hexo的基本使用/</id>
-    <published>2018-04-18T09:09:08.000Z</published>
-    <updated>2018-05-08T02:54:06.697Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Hexo相关的网站"><a href="#Hexo相关的网站" class="headerlink" title="Hexo相关的网站"></a>Hexo相关的网站</h2><p><a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/commands.html</a></p><h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;  hexo new post "新建一篇文章"  #新建一篇文章</span><br><span class="line">hexo generate  简写 hexo g  #生成静态文件</span><br><span class="line">hexo server #启动服务器</span><br><span class="line">hexo deploy 简写 hexo d #部署网站</span><br><span class="line">hexo clean #清理缓存文件和已生成静态的文件</span><br><span class="line">hexo version #显示hexo的版本</span><br></pre></td></tr></table></figure><h2 id="本地图片的使用"><a href="#本地图片的使用" class="headerlink" title="本地图片的使用"></a>本地图片的使用</h2><p>主配置_config.yml文件中将post_asset_folder:true</p><p>运行下面代码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:<span class="comment">//github.com/CodeFalling/hexo-asset-image –save</span></span><br></pre></td></tr></table></figure><p>图片的路径写法：”/images/hexo/bg.jpg”</p><p><img src="/images/hexo/hexoimg.png" alt="hexo图片"></p><h2 id="Hexo-主题安装"><a href="#Hexo-主题安装" class="headerlink" title="Hexo 主题安装"></a>Hexo 主题安装</h2><h2 id="主题的筛选"><a href="#主题的筛选" class="headerlink" title="主题的筛选"></a>主题的筛选</h2><p>Hexo主题 ( <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> )页面,可以欣赏到很多很优秀的主题</p><p><img src="/images/hexo/hexotheme.png" alt="hexo主题"></p><h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>点击图片,就会跳到这个主题的博客,看到实际的效果<br>下载这个主题,就点击主题文字,进入主题Github页面,然后复制下载地址</p><p><img src="/images/hexo/downloadtheme.png" alt="下载hexo主题"></p><p>进入blog目录,克隆主题到本地</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:<span class="comment">//github.com/TongchengQiu/hexo-theme-another.git themes/another</span></span><br></pre></td></tr></table></figure><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>修改blog根目录的_config.yml,将theme修改为another</p><p><em>注意: 某些主题可能需要安装Node.js的插件,在安装主题时,最好在主题的Githu主页看看安装步骤</em></p><p><img src="/images/hexo/edittheme.png" alt="hexo主题"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Hexo相关的网站&quot;&gt;&lt;a href=&quot;#Hexo相关的网站&quot; class=&quot;headerlink&quot; title=&quot;Hexo相关的网站&quot;&gt;&lt;/a&gt;Hexo相关的网站&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/comman
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="Hexo的基本使用" scheme="http://yoursite.com/tags/Hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
