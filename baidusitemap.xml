@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/05/23/oraclc%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-06-21T03:33:08.738Z</lastmod>
+    <data>
+        <display>
+        <title>oraclc基本使用</title>
+        <pubTime>2018-05-23T02:39:16.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="oracle" url="http://yoursite.com/categories/oracle/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/05/23/mysql%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2018-05-23T02:57:34.246Z</lastmod>
     <data>
@@ -51,24 +69,6 @@
            
              
               <breadCrumb title="link" url="http://yoursite.com/categories/link/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/05/23/oraclc%E7%99%BB%E9%99%86%E7%94%A8%E6%88%B7%E5%88%9B%E5%BB%BAobjects/</loc>
-    <lastmod>2018-05-23T02:44:39.349Z</lastmod>
-    <data>
-        <display>
-        <title>oraclc登陆用户创建objects</title>
-        <pubTime>2018-05-23T02:39:16.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="oracle" url="http://yoursite.com/categories/oracle/"/>
           
         </display>
     </data>
