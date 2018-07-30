@@ -4,8 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/07/30/oracle%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2018-07-30T08:32:31.153Z</lastmod>
+    <data>
+        <display>
+        <title>oracle函数</title>
+        <pubTime>2018-07-30T07:15:25.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="oracle" url="http://yoursite.com/categories/oracle/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/07/24/hexo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2018-07-24T08:37:16.019Z</lastmod>
+    <lastmod>2018-07-24T08:40:24.802Z</lastmod>
     <data>
         <display>
         <title>hexo基本操作</title>

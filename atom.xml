@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-24T08:37:16.019Z</updated>
+  <updated>2018-07-30T08:32:31.153Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>oracle函数</title>
+    <link href="http://yoursite.com/2018/07/30/oracle%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2018/07/30/oracle函数/</id>
+    <published>2018-07-30T07:15:25.000Z</published>
+    <updated>2018-07-30T08:32:31.153Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="oracle常用函数详解（详细）"><a href="#oracle常用函数详解（详细）" class="headerlink" title="oracle常用函数详解（详细）"></a>oracle常用函数详解（详细）</h1><p>   Oracle SQL 提供了用于执行特定操作的专用函数。这些函数大大增强了 SQL 语言的功能。函数可以接受零个或者多个输入参数，并返回一个输出结果。 oracle 数据库中主要使用两种类型的函数：</p><ol><li>单行函数：对每一个函数应用在表的记录中时，只能输入一行结果，返回一个结果，</li></ol><p>比如：MOD(x,y)返回 x 除以 y 的余数（x 和 y 可以是两个整数，也可以是表中的整</p><p>数列）。常用的单行函数有：</p><p>Ø  字符函数：对字符串操作。</p><p>Ø  数字函数：对数字进行计算，返回一个数字。</p><p>Ø  转换函数：可以将一种数据类型转换为另外一种数据类型。</p><p>Ø  日期函数：对日期和时间进行处理。</p><ol start="2"><li>聚合函数：聚合函数同时可以对多行数据进行操作，并返回一个结果。比如 SUM(x)</li></ol><p>返回结果集中 x 列的总合</p><h2 id="一、字符函数"><a href="#一、字符函数" class="headerlink" title="一、字符函数"></a>一、字符函数</h2><p>字符函数接受字符参数，这些参数可以是表中的列，也可以是一个字符串表达式。</p><p>常用的字符函数：</p><h3 id="CONCAT-X-Y-连接"><a href="#CONCAT-X-Y-连接" class="headerlink" title="CONCAT(X,Y)连接"></a>CONCAT(X,Y)连接</h3><p>连接字符串X和Y<br>示例 : SELECT CONCAT(‘Hello’,’world’) FROM dual;<br>示例结果 : Helloworld</p><h3 id="LENGTH-X-长度"><a href="#LENGTH-X-长度" class="headerlink" title="LENGTH(X)长度"></a>LENGTH(X)长度</h3><p>返回X的长度<br>示例 : SELECT LENGTH(‘Hello’) FROM dual;<br>示例结果 : 5</p><h3 id="LOWER-X-转小写"><a href="#LOWER-X-转小写" class="headerlink" title="LOWER(X)转小写"></a>LOWER(X)转小写</h3><p>X转换成小写<br>示例 : SELECT LOWER(‘Hello’) FROM dual;cc<br>示例结果 : hello</p><h3 id="UPPER-X-转大写"><a href="#UPPER-X-转大写" class="headerlink" title="UPPER(X)转大写"></a>UPPER(X)转大写</h3><p>X转换成大写<br>示例 : SELECT UPPER(‘hello’) FROM dual;c<br>示例结果 : HELLO</p><h3 id="REPLACE-X-old-new-替换"><a href="#REPLACE-X-old-new-替换" class="headerlink" title="REPLACE(X,old,new)替换"></a>REPLACE(X,old,new)替换</h3><p>在X中查找old，并替换成newcc<br>示例 : SELECT REPLACE(‘ABCDE’,’CD’,’AAA’)FROM dual;<br>示例结果 : ABAAAE</p><h2 id="二、数字函数"><a href="#二、数字函数" class="headerlink" title="二、数字函数"></a>二、数字函数</h2><p>数字函数接受数字参数，参数可以来自表中的一列，也可以是一个数字表达式。</p><h3 id="ABS-X-绝对值"><a href="#ABS-X-绝对值" class="headerlink" title="ABS(X)绝对值"></a>ABS(X)绝对值</h3><p>X的绝对值<br>示例 : ABS(-3)=3</p><h3 id="CEIL-X-取大"><a href="#CEIL-X-取大" class="headerlink" title="CEIL(X)取大"></a>CEIL(X)取大</h3><p>大于或等于X的最小值c<br>示例 : 大于或等于X的最小值</p><h3 id="FLOOR-X-取小"><a href="#FLOOR-X-取小" class="headerlink" title="FLOOR(X)取小"></a>FLOOR(X)取小</h3><p>大于或等于X的最小值<br>示例 : FLOOR(5.8)=5</p><h3 id="ROUND-X-Y-四舍五入"><a href="#ROUND-X-Y-四舍五入" class="headerlink" title="ROUND(X[,Y]四舍五入"></a>ROUND(X[,Y]四舍五入</h3><p>X在第Y位四舍五入<br>示例 : ROUND(3.456，2)=3.46</p><h3 id="TRUNC-X-Y-截断"><a href="#TRUNC-X-Y-截断" class="headerlink" title="TRUNC(X[,Y])截断"></a>TRUNC(X[,Y])截断</h3><p>X在第Y位截断<br>示例 : TRUNC(3.456，2)=3.45</p><h2 id="三、日期函数"><a href="#三、日期函数" class="headerlink" title="三、日期函数"></a>三、日期函数</h2><p>日期函数对日期进行运算。常用的日期函数有：</p><h3 id="1、ADD-MONTHS-d-n"><a href="#1、ADD-MONTHS-d-n" class="headerlink" title="1、ADD_MONTHS(d,n)"></a>1、ADD_MONTHS(d,n)</h3><p>在某一个日期 d 上，加上指定的月数 n，返回计算后的新日期。<br>d 表示日期，n 表示要加的月数。<br>例：SELECT SYSDATE,last_day(SYSDATE) FROM dual;</p><h3 id="2、LAST-DAY-d-c"><a href="#2、LAST-DAY-d-c" class="headerlink" title="2、LAST_DAY(d)c"></a>2、LAST_DAY(d)c</h3><p>2、LAST_DAY(d)<br>例：SELECT SYSDATE,last_day(SYSDATE) FROM dual;</p><h2 id="四、转换函数"><a href="#四、转换函数" class="headerlink" title="四、转换函数"></a>四、转换函数</h2><p>转换函数将值从一种数据类型转换为另外一种数据类型。常见的转换函数有：</p><h3 id="1、TO-CHAR-d-n-fmt"><a href="#1、TO-CHAR-d-n-fmt" class="headerlink" title="1、TO_CHAR(d|n[,fmt])"></a>1、TO_CHAR(d|n[,fmt])</h3><p>把日期和数字转换为制定格式的字符串。Fmt是格式化字符串<br>代码演示：TO_CHAR对日期的处理<br>SELECT TO_CHAR(SYSDATE,’YYYY”年”MM”月”DD”日” HH24:MI:SS’)”date” FROM dual;</p><h3 id="2、TO-DATE-X-fmt"><a href="#2、TO-DATE-X-fmt" class="headerlink" title="2、TO_DATE(X,[,fmt])"></a>2、TO_DATE(X,[,fmt])</h3><p>把一个字符串以fmt格式转换成一个日期类型</p><h3 id="3、TO-NUMBER-X-fmt"><a href="#3、TO-NUMBER-X-fmt" class="headerlink" title="3、TO_NUMBER(X,[,fmt])"></a>3、TO_NUMBER(X,[,fmt])</h3><p>把一个字符串以fmt格式转换为一个数字<br>代码演示：TO_NUM函数<br>SELECT TO_NUMBER(‘-$12,345.67’,’$99,999.99’)”num” FROM dual;</p><h2 id="五、其它单行函数"><a href="#五、其它单行函数" class="headerlink" title="五、其它单行函数"></a>五、其它单行函数</h2><h3 id="1、NVL-X-VALUE"><a href="#1、NVL-X-VALUE" class="headerlink" title="1、NVL(X,VALUE)"></a>1、NVL(X,VALUE)</h3><p>如果X为空，返回value，否则返回X</p><p>例：对工资是2000元以下的员工，如果没发奖金，每人奖金100元</p><p>代码演示：NVL函数</p><p>SQL&gt; SELECT ENAME,JOB,SAL,NVL(COMM,100) FROM EMP WHERE SAL&lt;2000;</p><h3 id="2、COALESCE-X-VALUE"><a href="#2、COALESCE-X-VALUE" class="headerlink" title="2、COALESCE(X,VALUE)"></a>2、COALESCE(X,VALUE)</h3><p>如果X为空，返回value，否则返回X</p><h2 id="六、聚合函数"><a href="#六、聚合函数" class="headerlink" title="六、聚合函数"></a>六、聚合函数</h2><p>聚合函数同时对一组数据进行操作，返回一行结果，比如计算一组数据的总和，平均值<br>等。</p><h3 id="AVG平均值"><a href="#AVG平均值" class="headerlink" title="AVG平均值"></a>AVG平均值</h3><p>AVG（表达式）</p><h3 id="SUM求和"><a href="#SUM求和" class="headerlink" title="SUM求和"></a>SUM求和</h3><p>代码演示：SUM(表达式)<br>SQL&gt; SELECT SUM(sal) FROM emp;</p><h3 id="MIN、MAX"><a href="#MIN、MAX" class="headerlink" title="MIN、MAX"></a>MIN、MAX</h3><p>MIN(表达式)、MAX(表达式)</p><h3 id="COUNT数据统计"><a href="#COUNT数据统计" class="headerlink" title="COUNT数据统计"></a>COUNT数据统计</h3><p>COUNT（表达式）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;oracle常用函数详解（详细）&quot;&gt;&lt;a href=&quot;#oracle常用函数详解（详细）&quot; class=&quot;headerlink&quot; title=&quot;oracle常用函数详解（详细）&quot;&gt;&lt;/a&gt;oracle常用函数详解（详细）&lt;/h1&gt;&lt;p&gt;   Oracle SQL 
+      
+    
+    </summary>
+    
+      <category term="oracle" scheme="http://yoursite.com/categories/oracle/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo基本操作</title>
     <link href="http://yoursite.com/2018/07/24/hexo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2018/07/24/hexo基本操作/</id>
     <published>2018-07-24T03:27:59.000Z</published>
-    <updated>2018-07-24T08:37:16.019Z</updated>
+    <updated>2018-07-24T08:40:24.802Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo基本操作"><a href="#Hexo基本操作" class="headerlink" title="Hexo基本操作"></a>Hexo基本操作</h1><h2 id="1、打开cmd命令窗口"><a href="#1、打开cmd命令窗口" class="headerlink" title="1、打开cmd命令窗口"></a>1、打开cmd命令窗口</h2><p>   这里有两种方式<br>   第一种 打开github文件所在位置鼠标右键定位<br>   <img src="/images/hexo/option/1.png" alt="hexo图片"><br>   第二种 点击左下角开始-&gt;搜索cmd-&gt;打开-&gt;d:-&gt;cd githubmodel-&gt;cd githublb<br>   如图所示<br>   <img src="/images/hexo/option/2.png" alt="hexo图片"></p><h2 id="2、启动hexo"><a href="#2、启动hexo" class="headerlink" title="2、启动hexo"></a>2、启动hexo</h2><p>   输入指令hexo s<br>   <img src="/images/hexo/option/3.png" alt="hexo图片"></p><h2 id="3、访问本地github"><a href="#3、访问本地github" class="headerlink" title="3、访问本地github"></a>3、访问本地github</h2><pre><code>输入地址访问本地github<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//localhost:4000/.</span></span><br></pre></td></tr></table></figure>Ctrl+C停止访问</code></pre><p>   <img src="/images/hexo/option/4.png" alt="hexo图片"></p><h2 id="4、部署网站"><a href="#4、部署网站" class="headerlink" title="4、部署网站"></a>4、部署网站</h2><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+C停止访问</span><br><span class="line">hexo clean #清理缓存文件和已生成静态的文件</span><br><span class="line">hexo deploy 简写 hexo d #部署网站</span><br></pre></td></tr></table></figure>![hexo图片](/images/hexo/option/5.png)部署成功效果如图</code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo基本操作"><a href="#Hexo基本操作" class="headerlink" title="Hexo基本操作"></a>Hexo基本操作</h1><h2 id="1、打开cmd命令窗口"><a href="#1、打开cmd命令窗口" class="headerlink" title="1、打开cmd命令窗口"></a>1、打开cmd命令窗口</h2><p>   这里有两种方式<br>   第一种 打开github文件所在位置鼠标右键定位<br>   <img src="/images/hexo/option/1.png" alt="hexo图片"><br>   第二种 点击左下角开始-&gt;搜索cmd-&gt;打开-&gt;d:-&gt;cd githubmodel-&gt;cd githublb<br>   如图所示<br>   <img src="/images/hexo/option/2.png" alt="hexo图片"></p><h2 id="2、启动hexo"><a href="#2、启动hexo" class="headerlink" title="2、启动hexo"></a>2、启动hexo</h2><p>   输入指令hexo s<br>   <img src="/images/hexo/option/3.png" alt="hexo图片"></p><h2 id="3、访问本地github"><a href="#3、访问本地github" class="headerlink" title="3、访问本地github"></a>3、访问本地github</h2><pre><code>输入地址访问本地github<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//localhost:4000/.</span></span><br></pre></td></tr></table></figure>Ctrl+C停止访问</code></pre><p>   <img src="/images/hexo/option/4.png" alt="hexo图片"></p><h2 id="4、部署网站"><a href="#4、部署网站" class="headerlink" title="4、部署网站"></a>4、部署网站</h2><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+C停止访问</span><br><span class="line">hexo clean #清理缓存文件和已生成静态的文件</span><br><span class="line">hexo deploy 简写 hexo d #部署网站</span><br></pre></td></tr></table></figure>![hexo图片](/images/hexo/option/5.png)部署成功效果如图![hexo图片](/images/hexo/option/6.png)</code></pre><h2 id="5、访问网站"><a href="#5、访问网站" class="headerlink" title="5、访问网站"></a>5、访问网站</h2><pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//liubing273656697.github.io</span></span><br></pre></td></tr></table></figure></code></pre>]]></content>
     
     <summary type="html">
     
@@ -469,20 +492,6 @@
     
     
       <category term="GitHub的基本使用" scheme="http://yoursite.com/tags/GitHub%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>categories</title>
-    <link href="http://yoursite.com/2018/04/13/categories/"/>
-    <id>http://yoursite.com/2018/04/13/categories/</id>
-    <published>2018-04-13T09:27:01.000Z</published>
-    <updated>2018-04-13T09:27:01.549Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
