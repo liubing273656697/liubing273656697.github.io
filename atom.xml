@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-30T08:32:31.153Z</updated>
+  <updated>2018-09-27T04:24:40.445Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win系统</title>
+    <link href="http://yoursite.com/2018/09/27/win%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://yoursite.com/2018/09/27/win系统/</id>
+    <published>2018-09-27T02:26:57.000Z</published>
+    <updated>2018-09-27T04:24:40.445Z</updated>
+    
+    <content type="html"><![CDATA[<p>待改<br>长按F2 进入Bios界面 按F7（Advanced Mode） 进入security—进入Secure Boot—Secure Boot Control(将Enabled改为 Disabled) —进入Boot—CSM Support(将Disabled改为 Enabled) –Launch PXE OpROM policy(将Disabled改为 Enabled) –进入 Advanced–点击SATA Configuration—SATA Mode Selection查看是否是AHCI—按F10保存—-插入U盘长按ESC–</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;待改&lt;br&gt;长按F2 进入Bios界面 按F7（Advanced Mode） 进入security—进入Secure Boot—Secure Boot Control(将Enabled改为 Disabled) —进入Boot—CSM Support(将Disabled改为 
+      
+    
+    </summary>
+    
+      <category term="win 10" scheme="http://yoursite.com/categories/win-10/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>oracle函数</title>
@@ -442,31 +465,6 @@
     
     
       <category term="vuejs项目的下载" scheme="http://yoursite.com/tags/vuejs%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%8B%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo的基本使用</title>
-    <link href="http://yoursite.com/2018/04/18/Hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2018/04/18/Hexo的基本使用/</id>
-    <published>2018-04-18T09:09:08.000Z</published>
-    <updated>2018-07-24T08:32:54.416Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Hexo相关的网站"><a href="#Hexo相关的网站" class="headerlink" title="Hexo相关的网站"></a>Hexo相关的网站</h1><p><a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/commands.html</a></p><h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;  hexo new post "新建一篇文章"  #新建一篇文章</span><br><span class="line">hexo generate  简写 hexo g  #生成静态文件</span><br><span class="line">hexo server #启动服务器</span><br><span class="line">hexo deploy 简写 hexo d #部署网站</span><br><span class="line">hexo clean #清理缓存文件和已生成静态的文件</span><br><span class="line">hexo version #显示hexo的版本</span><br></pre></td></tr></table></figure><h2 id="本地图片的使用"><a href="#本地图片的使用" class="headerlink" title="本地图片的使用"></a>本地图片的使用</h2><p>主配置_config.yml文件中将post_asset_folder:true</p><p>运行下面代码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:<span class="comment">//github.com/CodeFalling/hexo-asset-image –save</span></span><br></pre></td></tr></table></figure><p>图片的路径写法：”/images/hexo/bg.jpg”</p><p><img src="/images/hexo/hexoimg.png" alt="hexo图片"></p><h2 id="Hexo-主题安装"><a href="#Hexo-主题安装" class="headerlink" title="Hexo 主题安装"></a>Hexo 主题安装</h2><h2 id="主题的筛选"><a href="#主题的筛选" class="headerlink" title="主题的筛选"></a>主题的筛选</h2><p>Hexo主题 ( <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> )页面,可以欣赏到很多很优秀的主题</p><p><img src="/images/hexo/hexotheme.png" alt="hexo主题"></p><h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>点击图片,就会跳到这个主题的博客,看到实际的效果<br>下载这个主题,就点击主题文字,进入主题Github页面,然后复制下载地址</p><p><img src="/images/hexo/downloadtheme.png" alt="下载hexo主题"></p><p>进入blog目录,克隆主题到本地</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:<span class="comment">//github.com/TongchengQiu/hexo-theme-another.git themes/another</span></span><br></pre></td></tr></table></figure><h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>修改blog根目录的_config.yml,将theme修改为another</p><p><em>注意: 某些主题可能需要安装Node.js的插件,在安装主题时,最好在主题的Githu主页看看安装步骤</em></p><p><img src="/images/hexo/edittheme.png" alt="hexo主题"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Hexo相关的网站&quot;&gt;&lt;a href=&quot;#Hexo相关的网站&quot; class=&quot;headerlink&quot; title=&quot;Hexo相关的网站&quot;&gt;&lt;/a&gt;Hexo相关的网站&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/comman
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="Hexo的基本使用" scheme="http://yoursite.com/tags/Hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
