@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-09T02:50:28.606Z</updated>
+  <updated>2018-10-16T03:54:02.207Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>oracle sql</title>
+    <link href="http://yoursite.com/2018/10/16/oracle-sql/"/>
+    <id>http://yoursite.com/2018/10/16/oracle-sql/</id>
+    <published>2018-10-16T01:45:12.000Z</published>
+    <updated>2018-10-16T03:54:02.207Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="oracle常用sql"><a href="#oracle常用sql" class="headerlink" title="oracle常用sql"></a>oracle常用sql</h1><h2 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h2><p>1、复制表结构以及数据<br>create table d_table_name as select <em> from s_table_name;  注意并不会创建索引<br>2、只复制表结构<br>create table d_table_name as select </em> from s_table_name where 1=2;<br>3、只复制数据<br>（1）、两个表结构一样<br>insert into d_table_name select * from s_table_name;<br>2）、两个表的结构不一样，只复制部分列<br>insert into d_table_name (column1,column2,column3) select column1x,column2x,column3x from s_table_name;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;oracle常用sql&quot;&gt;&lt;a href=&quot;#oracle常用sql&quot; class=&quot;headerlink&quot; title=&quot;oracle常用sql&quot;&gt;&lt;/a&gt;oracle常用sql&lt;/h1&gt;&lt;h2 id=&quot;复制&quot;&gt;&lt;a href=&quot;#复制&quot; class=&quot;head
+      
+    
+    </summary>
+    
+      <category term="oracle" scheme="http://yoursite.com/categories/oracle/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>pl/sql环境变量配置</title>
@@ -261,9 +284,9 @@
     <link href="http://yoursite.com/2018/05/23/oraclc%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2018/05/23/oraclc基本使用/</id>
     <published>2018-05-23T02:39:16.000Z</published>
-    <updated>2018-06-21T03:33:08.738Z</updated>
+    <updated>2018-10-16T01:43:24.109Z</updated>
     
-    <content type="html"><![CDATA[<p>这里所有操作需要用户登陆,用户myroot,口令123456</p><h1 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h1><p>删除单个表<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首先你有drop的权限</span><br><span class="line">drop table 用户表名</span><br><span class="line">举例 ：drop table scott.tableA</span><br></pre></td></tr></table></figure></p><p>删除当前用户下所有表<br>场景 ：手动或者动态脚本清除 Oracle清空或者删除当前用户所有的表<br>方法一：使用pl/sql客户端，使用该用户登录，选中所有表 右键drop即可<br>方法二：前提：该用户 有此权限<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select <span class="string">'drop table '</span>||table_name||<span class="string">';'</span> <span class="keyword">from</span> user_tables;</span><br></pre></td></tr></table></figure></p><p>然后 拷贝其 SQL ，进行删除<br>方法三：使用存储过程删除该用户下所有的表<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">set ECHO ON</span><br><span class="line">set define off</span><br><span class="line">SPOOL logs/create_procedure.log</span><br><span class="line"></span><br><span class="line">--删除所有表的存储过程;</span><br><span class="line">create or replace procedure P_DROP_ALL_TABLE</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line">  --引用user_tables表中的tableName的类型;</span><br><span class="line">  tableName user_tables.table_name%type;</span><br><span class="line">  type ty is record(table_name varchar2(<span class="number">30</span>));</span><br><span class="line">  --定义ref类型游标;-强类型</span><br><span class="line">  type ref_type is ref cursor <span class="keyword">return</span> ty;</span><br><span class="line">  ref_t ref_type;</span><br><span class="line">  --定义变量存储数量;</span><br><span class="line">  mycount number(<span class="number">10</span>);</span><br><span class="line">  begin</span><br><span class="line">    --打开游标;</span><br><span class="line">    open ref_t <span class="keyword">for</span> select table_name <span class="keyword">from</span> user_tables;</span><br><span class="line">         loop</span><br><span class="line">             --从游标中获取一条记录,放入变量中;</span><br><span class="line">             fetch ref_t into tableName;</span><br><span class="line">                    SELECT COUNT(*) INTO mycount FROM user_tables WHERE TABLE_NAME = tableName;</span><br><span class="line">                    <span class="keyword">if</span> mycount&gt;<span class="number">0</span> then</span><br><span class="line">                       execute immediate <span class="string">'DROP TABLE '</span>||tableName || <span class="string">' CASCADE CONSTRAINT '</span>;</span><br><span class="line">                    end <span class="keyword">if</span>;</span><br><span class="line">             exit when ref_t%notfound;  --退出;</span><br><span class="line">         end loop;</span><br><span class="line">     close ref_t;</span><br><span class="line">  end;</span><br><span class="line">/</span><br></pre></td></tr></table></figure></p><p>清除的话，将 drop 替换为 truncate 或者 delete ,过程 同上</p><h1 id="创建函数"><a href="#创建函数" class="headerlink" title="创建函数"></a>创建函数</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>这里所有操作需要用户登陆,用户myroot,口令123456</p><h1 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h1><p>删除单个表<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首先你有drop的权限</span><br><span class="line">drop table 用户表名</span><br><span class="line">举例 ：drop table scott.tableA</span><br></pre></td></tr></table></figure></p><p>删除当前用户下所有表<br>场景 ：手动或者动态脚本清除 Oracle清空或者删除当前用户所有的表<br>方法一：使用pl/sql客户端，使用该用户登录，选中所有表 右键drop即可<br>方法二：前提：该用户 有此权限<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select <span class="string">'drop table '</span>||table_name||<span class="string">';'</span> <span class="keyword">from</span> user_tables;</span><br></pre></td></tr></table></figure></p><p>然后 拷贝其 SQL ，进行删除<br>方法三：使用存储过程删除该用户下所有的表<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">set ECHO ON</span><br><span class="line">set define off</span><br><span class="line">SPOOL logs/create_procedure.log</span><br><span class="line"></span><br><span class="line">--删除所有表的存储过程;</span><br><span class="line">create or replace procedure P_DROP_ALL_TABLE</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line">  --引用user_tables表中的tableName的类型;</span><br><span class="line">  tableName user_tables.table_name%type;</span><br><span class="line">  type ty is record(table_name varchar2(<span class="number">30</span>));</span><br><span class="line">  --定义ref类型游标;-强类型</span><br><span class="line">  type ref_type is ref cursor <span class="keyword">return</span> ty;</span><br><span class="line">  ref_t ref_type;</span><br><span class="line">  --定义变量存储数量;</span><br><span class="line">  mycount number(<span class="number">10</span>);</span><br><span class="line">  begin</span><br><span class="line">    --打开游标;</span><br><span class="line">    open ref_t <span class="keyword">for</span> select table_name <span class="keyword">from</span> user_tables;</span><br><span class="line">         loop</span><br><span class="line">             --从游标中获取一条记录,放入变量中;</span><br><span class="line">             fetch ref_t into tableName;</span><br><span class="line">                    SELECT COUNT(*) INTO mycount FROM user_tables WHERE TABLE_NAME = tableName;</span><br><span class="line">                    <span class="keyword">if</span> mycount&gt;<span class="number">0</span> then</span><br><span class="line">                       execute immediate <span class="string">'DROP TABLE '</span>||tableName || <span class="string">' CASCADE CONSTRAINT '</span>;</span><br><span class="line">                    end <span class="keyword">if</span>;</span><br><span class="line">             exit when ref_t%notfound;  --退出;</span><br><span class="line">         end loop;</span><br><span class="line">     close ref_t;</span><br><span class="line">  end;</span><br><span class="line">/</span><br></pre></td></tr></table></figure></p><p>清除的话，将 drop 替换为 truncate 或者 delete ,过程 同上</p><h1 id="创建函数"><a href="#创建函数" class="headerlink" title="创建函数"></a>创建函数</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www</span><br></pre></td></tr></table></figure><h1 id="复制表字段"><a href="#复制表字段" class="headerlink" title="复制表字段"></a>复制表字段</h1>]]></content>
     
     <summary type="html">
     
@@ -441,31 +464,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>ngrok的基本使用</title>
-    <link href="http://yoursite.com/2018/05/03/ngrok%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2018/05/03/ngrok的基本使用/</id>
-    <published>2018-05-03T06:15:33.000Z</published>
-    <updated>2018-05-08T02:51:02.624Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="ngrok使用的步骤"><a href="#ngrok使用的步骤" class="headerlink" title="ngrok使用的步骤"></a>ngrok使用的步骤</h2><h2 id="1-把项目放到tomcat启动（即点击startup-bat）tomcat"><a href="#1-把项目放到tomcat启动（即点击startup-bat）tomcat" class="headerlink" title="1.把项目放到tomcat启动（即点击startup.bat）tomcat"></a>1.把项目放到tomcat启动（即点击startup.bat）tomcat</h2><p>将项目放到tomcat下</p><p><img src="/images/ngrok/1.png" alt="ngrok图片"></p><p>启动tomcat</p><p><img src="/images/ngrok/2.png" alt="ngrok图片"></p><h2 id="2-打开https-www-ngrok-cc"><a href="#2-打开https-www-ngrok-cc" class="headerlink" title="2.打开https://www.ngrok.cc/"></a>2.打开<a href="https://www.ngrok.cc/" target="_blank" rel="noopener">https://www.ngrok.cc/</a></h2><p>打开<a href="https://www.ngrok.cc/，登录系统，设置相关信息。" target="_blank" rel="noopener">https://www.ngrok.cc/，登录系统，设置相关信息。</a></p><p><img src="/images/ngrok/3.png" alt="ngrok图片"></p><h2 id="3-通过cmd进入客户端根目录（即sunny-exe所在目录），启动sunny-exe"><a href="#3-通过cmd进入客户端根目录（即sunny-exe所在目录），启动sunny-exe" class="headerlink" title="3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe"></a>3.通过cmd进入客户端根目录（即sunny.exe所在目录），启动sunny.exe</h2><p>找到Sunny.exe所在的根目录</p><p><img src="/images/ngrok/4.png" alt="ngrok图片"></p><p>通过cmd进行启动，sunny.exe clientid id（<a href="https://www.ngrok.cc/" target="_blank" rel="noopener">https://www.ngrok.cc/</a> 网站上面的id）</p><p><img src="/images/ngrok/5.png" alt="ngrok图片"></p><h2 id="4-外网访问（即：第三步，窗口看到的ip就是外网ip）"><a href="#4-外网访问（即：第三步，窗口看到的ip就是外网ip）" class="headerlink" title="4.外网访问（即：第三步，窗口看到的ip就是外网ip）"></a>4.外网访问（即：第三步，窗口看到的ip就是外网ip）</h2><p>红色线部分是指IP，<a href="http://xiuxiu.free.ngrok.cc/dist/index.html" target="_blank" rel="noopener">http://xiuxiu.free.ngrok.cc/dist/index.html</a> ，dist是指项目名称，index.html页面。</p><p><img src="/images/ngrok/6.png" alt="ngrok图片"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;ngrok使用的步骤&quot;&gt;&lt;a href=&quot;#ngrok使用的步骤&quot; class=&quot;headerlink&quot; title=&quot;ngrok使用的步骤&quot;&gt;&lt;/a&gt;ngrok使用的步骤&lt;/h2&gt;&lt;h2 id=&quot;1-把项目放到tomcat启动（即点击startup-bat）to
-      
-    
-    </summary>
-    
-      <category term="ngrok" scheme="http://yoursite.com/categories/ngrok/"/>
-    
-    
-      <category term="ngrok的使用" scheme="http://yoursite.com/tags/ngrok%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
