@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/10/16/oracle-sql/</loc>
+    <lastmod>2019-07-12T08:22:13.911Z</lastmod>
+    <data>
+        <display>
+        <title>oracle sql</title>
+        <pubTime>2018-10-16T01:45:12.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="oracle" url="http://yoursite.com/categories/oracle/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/05/23/link-%E5%B8%B8%E7%94%A8/</loc>
     <lastmod>2019-07-12T06:45:26.199Z</lastmod>
     <data>
@@ -33,24 +51,6 @@
            
              
               <breadCrumb title="link" url="http://yoursite.com/categories/link/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/10/16/oracle-sql/</loc>
-    <lastmod>2018-10-16T03:54:02.207Z</lastmod>
-    <data>
-        <display>
-        <title>oracle sql</title>
-        <pubTime>2018-10-16T01:45:12.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="oracle" url="http://yoursite.com/categories/oracle/"/>
           
         </display>
     </data>
