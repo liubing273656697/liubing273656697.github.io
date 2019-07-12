@@ -4,8 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/05/23/link-%E5%B8%B8%E7%94%A8/</loc>
+    <lastmod>2019-07-12T06:45:26.199Z</lastmod>
+    <data>
+        <display>
+        <title>link(常用)</title>
+        <pubTime>2018-05-23T02:45:11.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="link" url="http://yoursite.com/categories/link/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/05/23/link-github/</loc>
-    <lastmod>2018-11-06T03:45:35.564Z</lastmod>
+    <lastmod>2018-11-06T13:46:58.013Z</lastmod>
     <data>
         <display>
         <title>link(github)</title>
@@ -248,24 +266,6 @@
            
              
               <breadCrumb title="GitHub" url="http://yoursite.com/categories/GitHub/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/05/23/link-%E5%B8%B8%E7%94%A8/</loc>
-    <lastmod>2018-05-23T02:46:52.140Z</lastmod>
-    <data>
-        <display>
-        <title>link(常用)</title>
-        <pubTime>2018-05-23T02:45:11.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="link" url="http://yoursite.com/categories/link/"/>
           
         </display>
     </data>
